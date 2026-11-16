@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <!-- Brand Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Outer hexagon/network ring -->
+    <circle cx="30" cy="30" r="28" fill="#10243B" />
+    <!-- Molecular orbital rings -->
+    <ellipse cx="30" cy="30" rx="24" ry="10" stroke="#2466C5" stroke-width="1.8" transform="rotate(-30 30 30)" opacity="0.8" />
+    <ellipse cx="30" cy="30" rx="24" ry="10" stroke="#F58200" stroke-width="1.8" transform="rotate(30 30 30)" opacity="0.85" />
+    <ellipse cx="30" cy="30" rx="24" ry="10" stroke="#087A4B" stroke-width="1.5" transform="rotate(90 30 30)" opacity="0.75" />
+    <!-- Center Moroccan 5-pointed Star with subtle scientific glow -->
+    <polygon points="30,19 33.5,26.5 41.5,27.5 35.5,33 37,41 30,37 23,41 24.5,33 18.5,27.5 26.5,26.5" fill="#FFFFFF" stroke="#1646A8" stroke-width="1" />
+    <circle cx="30" cy="30" r="3.5" fill="#D62828" />
+    <!-- Orbital Nodes -->
+    <circle cx="10" cy="20" r="2.5" fill="#F58200" />
+    <circle cx="50" cy="40" r="2.5" fill="#2466C5" />
+    <circle cx="30" cy="6" r="2" fill="#087A4B" />
+  </g>
+  <!-- Typography / Brandmark -->
+  <text x="78" y="34" font-family="'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="24" fill="#10243B" letter-spacing="1.5">MSRASI</text>
+  <rect x="78" y="40" width="36" height="3" rx="1.5" fill="#F58200" />
+  <text x="78" y="54" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="9" fill="#1646A8" letter-spacing="0.5">RECHERCHE APPLIQUÉE &amp; INNOVATION</text>
+  <text x="78" y="65" font-family="'Inter', system-ui, sans-serif" font-weight="500" font-size="7.5" fill="#64748B" letter-spacing="0.2">Association Marocaine • Sciences &amp; Technologie</text>
+</svg>

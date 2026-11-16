@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette - Atelier Scientifique & Innovation */
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #ccdbf5;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f3ff;
+  --color-surface-container: #e7eeff;
+  --color-surface-container-high: #dee9ff;
+  --color-surface-container-highest: #d5e3fe;
+  --color-surface-variant: #d5e3fe;
+  --color-surface-tint: #2f59bb;
+
+  --color-on-surface: #0d1c30;
+  --color-on-surface-variant: #434652;
+  --color-inverse-surface: #233145;
+  --color-inverse-on-surface: #ebf1ff;
+  --color-outline: #747684;
+  --color-outline-variant: #c4c6d4;
+
+  --color-primary: #003082;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #1646a8;
+  --color-on-primary-container: #a7bcff;
+  --color-inverse-primary: #b3c5ff;
+  --color-primary-fixed: #dbe1ff;
+  --color-primary-fixed-dim: #b3c5ff;
+  --color-on-primary-fixed: #00184a;
+  --color-on-primary-fixed-variant: #083fa2;
+
+  --color-secondary: #115cba;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #659dff;
+  --color-on-secondary-container: #003371;
+  --color-secondary-fixed: #d7e2ff;
+  --color-secondary-fixed-dim: #acc7ff;
+  --color-on-secondary-fixed: #001a40;
+  --color-on-secondary-fixed-variant: #004492;
+
+  --color-tertiary: #572a00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #793d00;
+  --color-on-tertiary-container: #ffab6a;
+  --color-tertiary-fixed: #ffdcc4;
+  --color-tertiary-fixed-dim: #ffb781;
+  --color-on-tertiary-fixed: #2f1400;
+  --color-on-tertiary-fixed-variant: #6f3800;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-background: #f9f9ff;
+  --color-on-background: #0d1c30;
+
+  /* Spacing tokens */
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-margin-desktop: 3rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+
+  /* Typography Fonts */
+  --font-display-hero: "Manrope", system-ui, sans-serif;
+  --font-headline-xl: "Manrope", system-ui, sans-serif;
+  --font-headline-lg: "Manrope", system-ui, sans-serif;
+  --font-headline-md: "Manrope", system-ui, sans-serif;
+  --font-headline-sm: "Manrope", system-ui, sans-serif;
+  --font-headline-xs: "Manrope", system-ui, sans-serif;
+  --font-body-lg: "Inter", system-ui, sans-serif;
+  --font-body-md: "Inter", system-ui, sans-serif;
+  --font-body-sm: "Inter", system-ui, sans-serif;
+  --font-label-md: "Inter", system-ui, sans-serif;
+  --font-label-sm: "Inter", system-ui, sans-serif;
+  --font-code-citation: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9ff;
+    color: #0d1c30;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    overscroll-behavior: none;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom typographic utility classes matching the MSRASI design spec */
+.text-display-hero {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 3.25rem;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.text-headline-xl {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 2.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.text-headline-xl-mobile {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1.875rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+.text-headline-lg {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1.875rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.text-headline-md {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+.text-headline-sm {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.text-headline-xs {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.text-body-lg {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.text-body-md {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.text-body-sm {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.54;
+  font-weight: 400;
+}
+
+.text-label-md {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.38;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+.text-label-sm {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.text-code-citation {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

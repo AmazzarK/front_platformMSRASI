@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#0d1c30","on-error":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#233145","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004492","primary-fixed":"#dbe1ff","surface-container-low":"#f0f3ff","primary-container":"#1646a8","tertiary":"#572a00","error":"#ba1a1a","on-tertiary-fixed-variant":"#6f3800","surface-bright":"#f9f9ff","surface-container-high":"#dee9ff","surface":"#f9f9ff","on-error-container":"#93000a","on-surface-variant":"#434652","outline":"#747684","outline-variant":"#c4c6d4","surface-variant":"#d5e3fe","primary":"#003082","on-secondary-container":"#003371","on-primary-fixed":"#00184a","on-secondary":"#ffffff","primary-fixed-dim":"#b3c5ff","surface-container":"#e7eeff","secondary":"#115cba","on-background":"#0d1c30","surface-tint":"#2f59bb","surface-container-highest":"#d5e3fe","secondary-container":"#659dff","on-primary-container":"#a7bcff","on-tertiary-fixed":"#2f1400","on-secondary-fixed":"#001a40","tertiary-fixed":"#ffdcc4","on-tertiary-container":"#ffab6a","tertiary-container":"#793d00","background":"#f9f9ff","error-container":"#ffdad6","surface-dim":"#ccdbf5","secondary-fixed-dim":"#acc7ff","inverse-on-surface":"#ebf1ff","inverse-primary":"#b3c5ff","tertiary-fixed-dim":"#ffb781","on-primary-fixed-variant":"#083fa2","secondary-fixed":"#d7e2ff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-desktop":"3rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-lg":["Manrope"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-xs":["Manrope"],"code-citation":["Inter"],"body-lg":["Inter"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-xl-mobile":["Manrope"],"label-md":["Inter"],"headline-lg-mobile":["Manrope"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xs":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-citation":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between p-space-md"><div class="space-y-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="MSRASI Official Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><div class="flex flex-col"><span class="font-headline-xs text-headline-xs font-bold text-white">Portail Scientifique</span><span class="font-label-sm text-label-sm text-tertiary-fixed">Console Administrative</span></div></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="espace-membre" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Vue Globale</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-publications" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Publications & Actes</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-adherents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Membres & Laboratoires</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-evenements" href="#"><span class="material-symbols-outlined text-[20px]">event</span>Colloques & Jury</a></nav></div><div class="p-space-sm rounded bg-surface-container/10 space-y-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm text-white font-medium leading-none">Dr. Responsable</span><span class="font-label-sm text-label-sm text-outline-variant">Comité Scientifique</span></div></div><a class="inline-flex items-center gap-space-xs text-label-sm text-tertiary-fixed hover:text-white pt-space-xs transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[14px]">arrow_back</span>Retour au portail public</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="MSRASI Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><span class="font-headline-xs text-headline-xs text-primary">MSRASI Administration</span></div><div class="flex items-center gap-space-md"><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Serveur Académique — En Ligne</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- BREADCRUMB & METRIC ACCENTS -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="hover:text-primary transition-colors cursor-pointer">Administration</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-primary font-bold">Gestion des Actualités & Communications Scientifiques</span>
+</div>
+<!-- Quick Editorial Sync Telemetry -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-code-citation text-code-citation">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Flux RSS & Newsletter MSRASI : Synchro Active (Dernière: 14:32)
+      </div>
+</div>
+</div>
+<!-- EDITORIAL HEADER BLOCK (NO BORDERS, BALANCED GEOMETRY) -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-surface-container opacity-50 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<div class="max-w-3xl space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">campaign</span>
+          Pôle Éditorial & Diffusion du Savoir
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Actualités, Communiqués & Retours d'Événements
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Rédigez les annonces de l'association, diffusez les avancées de recherche et convertissez les événements terminés en articles récapitulatifs sans ressaisie manuelle.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm w-full xl:w-auto">
+<button class="flex-1 xl:flex-initial inline-flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-tertiary-container hover:bg-tertiary text-on-tertiary-fixed font-label-md text-label-md transition-all duration-200 shadow-sm group" id="open-converter-btn">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed transition-transform group-hover:scale-110">bolt</span>
+<span>Convertir un événement clôturé</span>
+</button>
+<button class="flex-1 xl:flex-initial inline-flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all duration-200 shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Rédiger un article</span>
+</button>
+</div>
+</div>
+<!-- Editorial Stats Bar Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-lg pt-space-md bg-surface-container-low rounded-lg p-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Articles en Ligne</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">28</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+4 ce mois</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Lectures Cumulées (Q2)</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">42.8k</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">18 min moy.</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Taux de Citations / Retombées</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-primary font-bold">14.2%</span>
+<span class="font-label-sm text-label-sm text-outline">Indexées CNRST</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Actes d'Événements Convertis</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-tertiary-container font-bold">9</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">100% automatisé</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CONVERSION DRAWER / SPECIAL HIGHLIGHT PANEL -->
+<div class="bg-surface-container-highest rounded-xl p-space-lg mb-space-lg shadow-md transition-all duration-300" id="converter-drawer">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+<div>
+<h2 class="font-headline-xs text-headline-xs text-on-surface font-bold flex items-center gap-space-xs">
+            Générateur d'Article Post-Événement
+            <span class="px-space-xs py-0.5 rounded text-[10px] uppercase font-bold tracking-widest bg-tertiary-fixed text-on-tertiary-fixed">Moteur IA & Métadonnées</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sélectionnez un événement pour compiler instantanément les keynotes, photos et statistiques d'audience en une dépêche prête à publier.</p>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" id="close-converter-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Selector & Parameters -->
+<div class="lg:col-span-4 space-y-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Événement Clôturé à Convertir</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded p-2.5 pr-8 appearance-none focus:outline-none focus:bg-surface-container">
+<option selected="">CISA 2024 — Congrès International des Systèmes Avancés (Rabat)</option>
+<option>Symposium National IA & Santé Numérique (Marrakech)</option>
+<option>Atelier Transfrontalier Énergies Nouvelles (Tanger)</option>
+<option>Hackathon Universitaire Agritech (Agadir)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-3 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface">Éléments Injectés Automatiquement</label>
+<div class="space-y-1 text-on-surface-variant font-body-sm text-body-sm">
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary flex items-center justify-center text-[12px]"><span class="material-symbols-outlined text-[12px]">check</span></span>
+<span>Liste des 12 orateurs & laboratoires représentés</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary flex items-center justify-center text-[12px]"><span class="material-symbols-outlined text-[12px]">check</span></span>
+<span>Galerie photos certifiées HD (6 visuels sélectionnés)</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary flex items-center justify-center text-[12px]"><span class="material-symbols-outlined text-[12px]">check</span></span>
+<span>Chiffres clés (450 participants, 32 doctorants primés)</span>
+</label>
+<label class="flex items-center gap-space-xs cursor-pointer">
+<span class="w-4 h-4 rounded bg-primary-container text-on-primary flex items-center justify-center text-[12px]"><span class="material-symbols-outlined text-[12px]">check</span></span>
+<span>Lien pérenne vers les Actes & DOI dans l'archive</span>
+</label>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="w-full inline-flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>Générer le brouillon enrichi</span>
+</button>
+</div>
+</div>
+<!-- Live Generated Schema Preview -->
+<div class="lg:col-span-8 bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Aperçu du gabarit généré</span>
+<span class="font-code-citation text-code-citation text-secondary">Format : Editorial Institutional Mono</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-1 rounded bg-surface-container-low overflow-hidden h-36 relative">
+<img class="w-full h-full object-cover" data-alt="High-contrast photograph of a grand scientific auditorium in Rabat, Morocco. Moroccan flags and scientific symposium banners visible, warm cinematic lighting, prestigious academic ambience with scientists collaborating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6mLee8VHHNnuWfsiFG36CMx9mPWLujaDbi3Gf00wBcDhqikBFC3RtOmyEHjjIspSdHkJVgRagv39_i-0nocdKuSlmT7z5TCe6hTYwZ8t0CkaMkt7ZG7nBmDpghWZHCeE-b1-P9NZoJetYbfg_J9-mGNI51u_FXQ4qUXLFBG74VJ6KrZuSnCH7FKIuimh6DQmkk-U4Z6C2hn2sxzjA-VTeTQSnDyl3ohK7GjzW1as"/>
+<div class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-on-surface/80 text-white font-label-sm text-[10px]">Photo Principale</div>
+</div>
+<div class="md:col-span-2 space-y-space-xs">
+<span class="inline-block px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Retours sur événements</span>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Retour en images sur le Congrès International CISA 2024 : 450 congressistes à Rabat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Clôturée ce jeudi, la 6ème édition a rassemblé plus de 450 spécialistes en intelligence artificielle, microélectronique et énergies renouvelables venus de 14 pays...
+              </p>
+<div class="flex items-center gap-space-md pt-space-xs font-code-citation text-code-citation text-outline">
+<span>Orateurs: Pr. El Mansouri, Dr. Bennani</span>
+<span>•</span>
+<span>Badge: Lié à CISA-2024</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+            Personnaliser la structure
+          </button>
+<button class="px-space-md py-1.5 rounded bg-tertiary-container hover:bg-tertiary text-on-tertiary-fixed font-label-md text-label-md transition-colors">
+            Ouvrir dans l'éditeur de contenu →
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- FILTERING AND CATEGORIZATION SECTION -->
+<div class="flex flex-col gap-space-md mb-space-md">
+<!-- Category Tabs Filter -->
+<div class="flex items-center justify-between overflow-x-auto pb-1 scrollbar-none">
+<div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low">
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-label-md text-label-md shadow-sm">
+          Toutes <span class="ml-1 opacity-75">(32)</span>
+</button>
+<button class="px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+          Annonces officielles <span class="ml-1 opacity-75">(8)</span>
+</button>
+<button class="px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+          Résultats de recherche <span class="ml-1 opacity-75">(10)</span>
+</button>
+<button class="px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+          Retours sur événements <span class="ml-1 opacity-75">(9)</span>
+</button>
+<button class="px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">
+          Partenariats <span class="ml-1 opacity-75">(5)</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span>Tri par:</span>
+<span class="text-primary font-semibold cursor-pointer">Date décroissante</span>
+</div>
+</div>
+<!-- Search Bar & Granular Status Filter Controls -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<!-- Search Input with Leading Icon -->
+<div class="md:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low text-on-surface placeholder:text-outline rounded font-body-md text-body-md focus:outline-none focus:bg-surface-container" placeholder="Rechercher par mot-clé, chercheur, laboratoire ou événement lié..." type="text"/>
+</div>
+<!-- Status Selection -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full h-10 bg-surface-container-low text-on-surface font-body-md text-body-md rounded px-3 pr-8 appearance-none focus:outline-none focus:bg-surface-container">
+<option value="all">Tous les Statuts (Publié, Brouillon, Archivé)</option>
+<option value="published">Statut : Publié en ligne</option>
+<option value="draft">Statut : Brouillon</option>
+<option value="review">Statut : En revue scientifique</option>
+<option value="archived">Statut : Archivé</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 pointer-events-none text-outline">tune</span>
+</div>
+</div>
+<!-- Secondary Controls & Export -->
+<div class="md:col-span-3 flex items-center justify-end gap-space-xs">
+<button class="h-10 px-space-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md inline-flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Filtres avancés</span>
+</button>
+<button class="h-10 px-space-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md inline-flex items-center gap-space-xs transition-colors" title="Exporter le listing en CSV/PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- NEWS MANAGEMENT DATA TABLE (INSTITUTIONAL EDITORIAL SPEC) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Article & Auteur</th>
+<th class="py-3 px-space-sm">Catégorie</th>
+<th class="py-3 px-space-sm">Date de Publication</th>
+<th class="py-3 px-space-sm text-right">Vues & Lectures</th>
+<th class="py-3 px-space-sm">Événement Lié</th>
+<th class="py-3 px-space-sm text-center">Statut</th>
+<th class="py-3 px-space-sm text-center">À la une</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- ROW 1: Signature convention R&D -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Official signing ceremony between Moroccan academic researchers and laboratory directors in modern Rabat research complex. Blue folders, fountain pens, handshake, dignified institutional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0fYjB92josHr3dGddZtLNWwvTFgIYSa8WgMeLYMYO2JMwbjjSrJlvB2yPsz6Ez-u8QymNTrJHqNpqaVdrVfdqR4n7TVowpw2YQQ2bTxis-ihtpvf-9JPkAQe3QwuKVKH8wQEBH1p43BwsoQ6skwdAdTH3a4NaSpoPeItcrCMXVQyAmvF4KxCxq6KRcqH_jZ9wHTg1sj4WYJqaP8Rx-EIQmQii7Nml_C5CS7O74Hg"/>
+</div>
+<div class="flex flex-col min-w-0 max-w-sm">
+<span class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate hover:text-primary cursor-pointer">
+                    Signature d'une convention de partenariat R&D avec MascIR et l'UM6P
+                  </span>
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm mt-0.5">
+<span>Pr. A. Chraibi</span>
+<span>•</span>
+<span class="text-secondary font-medium">Pôle Nanomatériaux & Énergie</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                Partenariats
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-on-surface-variant font-code-citation text-code-citation">
+              18 Juin 2024<br/><span class="text-outline">10:45 AM</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-right">
+<div class="font-semibold text-on-surface">3 420 vues</div>
+<div class="text-secondary text-[11px]">84 partages pro</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="text-outline italic">— Aucun</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Publié
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<!-- Switch Active Toggle -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-right">
+<div class="inline-flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Modifier l'article">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Dupliquer">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Voir sur le portail public">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-tertiary transition-colors" title="Archiver">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Retour en images CISA 2024 (CONVERTED EVENT) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="International computer science congress closing ceremony in Morocco, scientists and doctoral candidates gathered around research display posters and honorary diplomas. Natural daylight, scholarly focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVrDnAXHk-Xx9E3hCJxe4527vw9pDyblBZiYzNk0pp73FTto7s227YOWSjMxssxEpvtx960NRFvfod3bpaXvgH0FDX8gBwpg8glX2_ptyk3GdYMPvvEuQM5Vn2PMsl2d5cidsQ2nm1tFy0IdBEobV5g8QN8GPfzDRa71Zg-os66YYhjlpuEJy3k9w0iik2_31kjbIvbyeZSkPrfnCRm23hQ4xASRKpZniPO1-rBAk"/>
+</div>
+<div class="flex flex-col min-w-0 max-w-sm">
+<span class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate hover:text-primary cursor-pointer">
+                    Retour en images sur le Congrès International CISA 2024 : 450 congressistes à Rabat
+                  </span>
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm mt-0.5">
+<span>Comité d'Organisation CISA</span>
+<span>•</span>
+<span class="text-tertiary-container font-medium">Conversion Automatique</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                Retours sur événements
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-on-surface-variant font-code-citation text-code-citation">
+              14 Juin 2024<br/><span class="text-outline">16:20 PM</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-right">
+<div class="font-semibold text-on-surface">5 890 vues</div>
+<div class="text-secondary text-[11px]">312 téléchargements Actes</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-tertiary-container text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">link</span>
+                Lié à CISA-2024
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Publié
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-right">
+<div class="inline-flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Modifier l'article">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Dupliquer">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Voir sur le portail public">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-tertiary transition-colors" title="Archiver">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Bourses d'excellence -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Young North African female researcher working in a high-tech biotechnology cleanroom laboratory in Morocco, adjusting a precision spectrometer with colleague observing. Crisp, scientific realism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANgdQOnRAxyaPNiQGXx4sVp1VBuDwNWrgkn-3SuQFWCod3dWUTkgpK_jDjisFVJFDn_r2trUwX4RZEwEgr0WbKJ-6Ag5vx8su3PhFZkoe836C9ZtXhM9rMYFoBgaJPa4aJOvdVvVRuGl668Hdh5A0hRdBa_qBtB6H4NMzs3ITkeAPOM2cB59ydTD4KEZBab6FVk4kf3-oKT15_cCy_ldc4Aqe2RNuwtDlC0lZ5WxA"/>
+</div>
+<div class="flex flex-col min-w-0 max-w-sm">
+<span class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate hover:text-primary cursor-pointer">
+                    Lancement du programme de bourses d'excellence pour jeunes chercheuses 2025
+                  </span>
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm mt-0.5">
+<span>Secrétariat Général MSRASI</span>
+<span>•</span>
+<span class="text-secondary font-medium">Bourses & Soutien</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Annonces officielles
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-on-surface-variant font-code-citation text-code-citation">
+              02 Juin 2024<br/><span class="text-outline">09:00 AM</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-right">
+<div class="font-semibold text-on-surface">11 200 vues</div>
+<div class="text-secondary text-[11px]">840 candidatures initiées</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="text-outline italic">— Aucun</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Publié
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-right">
+<div class="inline-flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Modifier l'article">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Dupliquer">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Voir sur le portail public">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-tertiary transition-colors" title="Archiver">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Appel à communication Hydrogène Vert -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Futuristic solar and green hydrogen industrial testbed in the desert near Ouarzazate, Morocco. Deep blue sky, scientific sensor arrays, gleaming metallic pipelines, editorial science photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ4e-RPwUJTH8ufFeAqkZYsJDZdXy9bQ2cG9Skn1a9ATL2JDvbgTAcUHKs0LpRMWN3SdfoEhGgVAOvhkpavakG21VOi7qdthGZpM9AooqWb_N66fQn7_gFq2-UsjplsVFpZpDLjx9eV019fPvEZgo5LhfU0xfqvam_WSdSaxUE_voBA8LbBu8_NcQUMbyw37WhAs8FbRti2xkSuwM08IFHgH4Uc5Px6ofOAveqoqo"/>
+</div>
+<div class="flex flex-col min-w-0 max-w-sm">
+<span class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate hover:text-primary cursor-pointer">
+                    Appel à communication : Symposium National sur l'Hydrogène Vert
+                  </span>
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm mt-0.5">
+<span>Dr. M. Tazi</span>
+<span>•</span>
+<span class="text-secondary font-medium">Commission Énergies Décarbonées</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                Résultats de recherche
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-on-surface-variant font-code-citation text-code-citation">
+              28 Mai 2024<br/><span class="text-outline">14:10 PM</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-right">
+<div class="font-semibold text-on-surface">2 180 vues</div>
+<div class="text-secondary text-[11px]">42 résumés soumis</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">event</span>
+                Symp-H2-2024
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Publié
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-right">
+<div class="inline-flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Modifier l'article">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Dupliquer">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Voir sur le portail public">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-tertiary transition-colors" title="Archiver">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Draft In Review -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 relative bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[28px]">description</span>
+</div>
+<div class="flex flex-col min-w-0 max-w-sm">
+<span class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate hover:text-primary cursor-pointer">
+                    Bilan annuel des coopérations euro-méditerranéennes en agronomie
+                  </span>
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm mt-0.5">
+<span>Dr. S. Idrissi</span>
+<span>•</span>
+<span class="text-on-surface-variant font-medium">Brouillon en relecture</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+                Résultats de recherche
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-on-surface-variant font-code-citation text-code-citation">
+              En cours<br/><span class="text-outline">Mise à jour il y a 2h</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-right">
+<span class="text-outline italic">Non mesuré (Interne)</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap">
+<span class="text-outline italic">— Aucun</span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                En revue
+              </span>
+</td>
+<td class="py-space-md px-space-sm whitespace-nowrap text-center">
+<label class="relative inline-flex items-center cursor-not-allowed opacity-40">
+<input class="sr-only peer" disabled="" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4"></div>
+</label>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap text-right">
+<div class="inline-flex items-center gap-space-xs text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container hover:text-primary transition-colors" title="Continuer la rédaction">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container hover:text-error transition-colors" title="Supprimer">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- TABLE FOOTER & PAGINATION -->
+<div class="bg-surface-container-low px-space-md py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span>Affichage de 1 à 5 sur 32 actualités répertoriées</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-outline hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-bold text-label-sm">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium text-label-sm transition-colors">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium text-label-sm transition-colors">3</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-medium text-label-sm transition-colors">4</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- EDITORIAL GUIDELINE / SCIENTIFIC RIGOR BANNER -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface font-bold">Protocole de Validation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Toute annonce scientifique mentionnant un brevet ou une découverte majeure requiert l'aval du Secrétaire de Commission.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">share</span>
+<div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface font-bold">Multi-Diffusion Automatisée</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dès publication, l'article alimente simultanément la lettre d'information aux 1 200 membres et la passerelle LinkedIn MSRASI.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">archive</span>
+<div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface font-bold">Conservation Pérenne</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Chaque publication d'événement clôturé est dotée d'une clé d'archivage indexable par le Comité National de Recherche.</p>
+</div>
+</div>
+</div>
+<script>
+    // Simple inline interactive behavior for toggling the conversion drawer
+    const converterDrawer = document.getElementById('converter-drawer');
+    const openConverterBtn = document.getElementById('open-converter-btn');
+    const closeConverterBtn = document.getElementById('close-converter-btn');
+
+    if (openConverterBtn && converterDrawer) {
+      openConverterBtn.addEventListener('click', () => {
+        converterDrawer.classList.toggle('hidden');
+        if (!converterDrawer.classList.contains('hidden')) {
+          converterDrawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    }
+
+    if (closeConverterBtn && converterDrawer) {
+      closeConverterBtn.addEventListener('click', () => {
+        converterDrawer.classList.add('hidden');
+      });
+    }
+  </script>
+</div></main></div></body></html>

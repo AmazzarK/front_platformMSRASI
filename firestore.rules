@@ -1,0 +1,281 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global safety net: deny all by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Connection health check document
+    match /test/connection {
+      allow get: if true;
+    }
+
+    // --- Primitive Helpers ---
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        request.auth.token.email == 'amazzar.consult@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // --- Validation Blueprints ---
+    function isValidAdminUser(data) {
+      return data.keys().hasAll(['uid', 'email', 'displayName', 'role', 'createdAt']) &&
+        data.keys().hasOnly(['uid', 'email', 'displayName', 'role', 'createdAt']) &&
+        data.uid is string && isValidId(data.uid) &&
+        data.email is string && data.email.size() >= 3 && data.email.size() <= 150 &&
+        data.displayName is string && data.displayName.size() >= 2 && data.displayName.size() <= 120 &&
+        data.role in ['admin', 'scientific_committee'] &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidEvent(data) {
+      return data.keys().hasAll([
+          'id', 'code', 'title', 'archetype', 'category', 'format',
+          'dateLabel', 'location', 'capacity', 'registeredCount',
+          'status', 'featured', 'createdBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'code', 'title', 'shortSummary', 'description', 'archetype',
+          'category', 'discipline', 'format', 'dateLabel', 'startDate',
+          'location', 'city', 'capacity', 'registeredCount', 'status',
+          'featured', 'imageUrl', 'doi', 'languages', 'tags',
+          'createdBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.id is string && isValidId(data.id) &&
+        data.code is string && data.code.size() >= 2 && data.code.size() <= 40 &&
+        data.title is string && data.title.size() >= 3 && data.title.size() <= 220 &&
+        (!('shortSummary' in data) || (data.shortSummary is string && data.shortSummary.size() <= 400)) &&
+        (!('description' in data) || (data.description is string && data.description.size() <= 8000)) &&
+        data.archetype in ['conf', 'workshop', 'hackathon', 'symposium'] &&
+        data.category is string && data.category.size() >= 1 && data.category.size() <= 80 &&
+        (!('discipline' in data) || (data.discipline is string && data.discipline.size() <= 80)) &&
+        data.format in ['presentiel', 'virtuel', 'hybride'] &&
+        data.dateLabel is string && data.dateLabel.size() >= 2 && data.dateLabel.size() <= 80 &&
+        (!('startDate' in data) || (data.startDate is string && data.startDate.size() <= 30)) &&
+        data.location is string && data.location.size() >= 2 && data.location.size() <= 160 &&
+        (!('city' in data) || (data.city is string && data.city.size() <= 80)) &&
+        data.capacity is int && data.capacity >= 1 && data.capacity <= 50000 &&
+        data.registeredCount is int && data.registeredCount >= 0 && data.registeredCount <= 50000 &&
+        data.status in ['publie', 'brouillon', 'en_attente', 'cloture', 'archive'] &&
+        data.featured is bool &&
+        (!('imageUrl' in data) || (data.imageUrl is string && data.imageUrl.size() <= 1000)) &&
+        (!('doi' in data) || (data.doi is string && data.doi.size() <= 120)) &&
+        (!('languages' in data) || (data.languages is list && data.languages.size() <= 6 && (data.languages.size() == 0 || data.languages[0] is string))) &&
+        (!('tags' in data) || (data.tags is list && data.tags.size() <= 10 && (data.tags.size() == 0 || data.tags[0] is string))) &&
+        data.createdBy is string && data.createdBy.size() >= 1 && data.createdBy.size() <= 128 &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidRegistration(data) {
+      return data.keys().hasAll([
+          'id', 'refCode', 'eventId', 'eventTitle', 'fullName', 'email',
+          'phone', 'institution', 'academicStatus', 'modality',
+          'participationRole', 'consentCNDP', 'status', 'createdAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'refCode', 'eventId', 'eventTitle', 'userId', 'fullName',
+          'email', 'phone', 'city', 'country', 'institution', 'laboratory',
+          'academicStatus', 'modality', 'participationRole', 'paperTitle',
+          'track', 'submissionCode', 'tariffLabel', 'dietaryPreference',
+          'certificateType', 'consentCNDP', 'consentMedia', 'status', 'createdAt'
+        ]) &&
+        data.id is string && isValidId(data.id) &&
+        data.refCode is string && data.refCode.size() >= 4 && data.refCode.size() <= 40 &&
+        data.eventId is string && isValidId(data.eventId) &&
+        data.eventTitle is string && data.eventTitle.size() >= 2 && data.eventTitle.size() <= 220 &&
+        (!('userId' in data) || (data.userId is string && data.userId.size() <= 128)) &&
+        data.fullName is string && data.fullName.size() >= 2 && data.fullName.size() <= 140 &&
+        data.email is string && data.email.size() >= 5 && data.email.size() <= 150 &&
+        data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 40 &&
+        (!('city' in data) || (data.city is string && data.city.size() <= 80)) &&
+        (!('country' in data) || (data.country is string && data.country.size() <= 80)) &&
+        data.institution is string && data.institution.size() >= 2 && data.institution.size() <= 180 &&
+        (!('laboratory' in data) || (data.laboratory is string && data.laboratory.size() <= 180)) &&
+        data.academicStatus is string && data.academicStatus.size() >= 2 && data.academicStatus.size() <= 60 &&
+        data.modality in ['onsite', 'online'] &&
+        data.participationRole in ['auditeur', 'auteur_oral', 'auteur_poster'] &&
+        (!('paperTitle' in data) || (data.paperTitle is string && data.paperTitle.size() <= 300)) &&
+        (!('track' in data) || (data.track is string && data.track.size() <= 120)) &&
+        (!('submissionCode' in data) || (data.submissionCode is string && data.submissionCode.size() <= 60)) &&
+        (!('tariffLabel' in data) || (data.tariffLabel is string && data.tariffLabel.size() <= 80)) &&
+        (!('dietaryPreference' in data) || (data.dietaryPreference is string && data.dietaryPreference.size() <= 100)) &&
+        (!('certificateType' in data) || (data.certificateType is string && data.certificateType.size() <= 120)) &&
+        data.consentCNDP == true &&
+        (!('consentMedia' in data) || data.consentMedia is bool) &&
+        data.status in ['valide', 'en_attente', 'annule'] &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidArticle(data) {
+      return data.keys().hasAll([
+          'id', 'title', 'summary', 'author', 'category',
+          'publishedLabel', 'views', 'status', 'featured',
+          'createdBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'title', 'summary', 'content', 'author', 'department',
+          'category', 'publishedLabel', 'views', 'sharesLabel',
+          'linkedEventCode', 'status', 'featured', 'imageUrl',
+          'createdBy', 'createdAt', 'updatedAt'
+        ]) &&
+        data.id is string && isValidId(data.id) &&
+        data.title is string && data.title.size() >= 3 && data.title.size() <= 240 &&
+        data.summary is string && data.summary.size() >= 2 && data.summary.size() <= 600 &&
+        (!('content' in data) || (data.content is string && data.content.size() <= 12000)) &&
+        data.author is string && data.author.size() >= 2 && data.author.size() <= 120 &&
+        (!('department' in data) || (data.department is string && data.department.size() <= 120)) &&
+        data.category in ['Annonces officielles', 'Résultats de recherche', 'Retours sur événements', 'Partenariats'] &&
+        data.publishedLabel is string && data.publishedLabel.size() >= 2 && data.publishedLabel.size() <= 60 &&
+        data.views is int && data.views >= 0 && data.views <= 10000000 &&
+        (!('sharesLabel' in data) || (data.sharesLabel is string && data.sharesLabel.size() <= 80)) &&
+        (!('linkedEventCode' in data) || (data.linkedEventCode is string && data.linkedEventCode.size() <= 60)) &&
+        data.status in ['publie', 'brouillon', 'en_revue', 'archive'] &&
+        data.featured is bool &&
+        (!('imageUrl' in data) || (data.imageUrl is string && data.imageUrl.size() <= 1000)) &&
+        data.createdBy is string && data.createdBy.size() >= 1 && data.createdBy.size() <= 128 &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidSubscriber(data) {
+      return data.keys().hasAll(['id', 'email', 'immediateCfpAlerts', 'createdAt']) &&
+        data.keys().hasOnly(['id', 'email', 'immediateCfpAlerts', 'source', 'createdAt']) &&
+        data.id is string && isValidId(data.id) &&
+        data.email is string && data.email.size() >= 5 && data.email.size() <= 150 &&
+        data.immediateCfpAlerts is bool &&
+        (!('source' in data) || (data.source is string && data.source.size() <= 60)) &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidActivityLog(data) {
+      return data.keys().hasAll(['id', 'type', 'message', 'actorUid', 'createdAt']) &&
+        data.keys().hasOnly(['id', 'type', 'message', 'detail', 'actorUid', 'createdAt']) &&
+        data.id is string && isValidId(data.id) &&
+        data.type in ['registration', 'article', 'event', 'export'] &&
+        data.message is string && data.message.size() >= 3 && data.message.size() <= 280 &&
+        (!('detail' in data) || (data.detail is string && data.detail.size() <= 180)) &&
+        data.actorUid is string && data.actorUid.size() >= 1 && data.actorUid.size() <= 128 &&
+        data.createdAt is timestamp;
+    }
+
+    // --- Collection Rules ---
+    match /admins/{uid} {
+      allow get: if isSignedIn() && isValidId(uid) && (request.auth.uid == uid || isAdmin());
+      allow list: if isAdmin();
+      allow create, update: if isAdmin() && isValidId(uid) && isValidAdminUser(incoming());
+      allow delete: if isAdmin() && isValidId(uid);
+    }
+
+    match /events/{eventId} {
+      allow get: if isValidId(eventId) && (existing().status in ['publie', 'cloture'] || isAdmin());
+      allow list: if existing().status in ['publie', 'cloture'] || isAdmin();
+      allow create: if isAdmin() && isValidId(eventId) &&
+        isValidEvent(incoming()) &&
+        incoming().id == eventId &&
+        incoming().createdBy == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time;
+      allow update: if isAdmin() && isValidId(eventId) &&
+        isValidEvent(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().createdBy == existing().createdBy &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'code', 'title', 'shortSummary', 'description', 'archetype',
+          'category', 'discipline', 'format', 'dateLabel', 'startDate',
+          'location', 'city', 'capacity', 'registeredCount', 'status',
+          'featured', 'imageUrl', 'doi', 'languages', 'tags', 'updatedAt'
+        ]);
+      allow delete: if isAdmin() && isValidId(eventId);
+    }
+
+    match /registrations/{registrationId} {
+      allow get: if isValidId(registrationId) && (
+        isAdmin() ||
+        (isVerifiedUser() && existing().userId == request.auth.uid)
+      );
+      allow list: if isAdmin() || (isVerifiedUser() && existing().userId == request.auth.uid);
+      allow create: if isValidId(registrationId) &&
+        isValidRegistration(incoming()) &&
+        incoming().id == registrationId &&
+        incoming().createdAt == request.time &&
+        incoming().status == 'valide' &&
+        (!('userId' in incoming()) || (isSignedIn() && incoming().userId == request.auth.uid)) &&
+        exists(/databases/$(database)/documents/events/$(incoming().eventId));
+      allow update: if isAdmin() && isValidId(registrationId) &&
+        isValidRegistration(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().eventId == existing().eventId &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['status', 'modality', 'tariffLabel']);
+      allow delete: if isAdmin() && isValidId(registrationId);
+    }
+
+    match /articles/{articleId} {
+      allow get: if isValidId(articleId) && (existing().status == 'publie' || isAdmin());
+      allow list: if existing().status == 'publie' || isAdmin();
+      allow create: if isAdmin() && isValidId(articleId) &&
+        isValidArticle(incoming()) &&
+        incoming().id == articleId &&
+        incoming().createdBy == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time;
+      allow update: if isAdmin() && isValidId(articleId) &&
+        isValidArticle(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().createdBy == existing().createdBy &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'title', 'summary', 'content', 'author', 'department',
+          'category', 'publishedLabel', 'views', 'sharesLabel',
+          'linkedEventCode', 'status', 'featured', 'imageUrl', 'updatedAt'
+        ]);
+      allow delete: if isAdmin() && isValidId(articleId);
+    }
+
+    match /newsletter_subscribers/{subscriberId} {
+      allow get, list: if isAdmin();
+      allow create: if isValidId(subscriberId) &&
+        isValidSubscriber(incoming()) &&
+        incoming().id == subscriberId &&
+        incoming().createdAt == request.time;
+      allow update, delete: if isAdmin() && isValidId(subscriberId);
+    }
+
+    match /activity_logs/{logId} {
+      allow get, list: if isAdmin();
+      allow create: if isAdmin() && isValidId(logId) &&
+        isValidActivityLog(incoming()) &&
+        incoming().id == logId &&
+        incoming().actorUid == request.auth.uid &&
+        incoming().createdAt == request.time;
+      allow update, delete: if false;
+    }
+  }
+}

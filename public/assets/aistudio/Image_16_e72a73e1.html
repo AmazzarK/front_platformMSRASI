@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#0d1c30","on-error":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#233145","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004492","primary-fixed":"#dbe1ff","surface-container-low":"#f0f3ff","primary-container":"#1646a8","tertiary":"#572a00","error":"#ba1a1a","on-tertiary-fixed-variant":"#6f3800","surface-bright":"#f9f9ff","surface-container-high":"#dee9ff","surface":"#f9f9ff","on-error-container":"#93000a","on-surface-variant":"#434652","outline":"#747684","outline-variant":"#c4c6d4","surface-variant":"#d5e3fe","primary":"#003082","on-secondary-container":"#003371","on-primary-fixed":"#00184a","on-secondary":"#ffffff","primary-fixed-dim":"#b3c5ff","surface-container":"#e7eeff","secondary":"#115cba","on-background":"#0d1c30","surface-tint":"#2f59bb","surface-container-highest":"#d5e3fe","secondary-container":"#659dff","on-primary-container":"#a7bcff","on-tertiary-fixed":"#2f1400","on-secondary-fixed":"#001a40","tertiary-fixed":"#ffdcc4","on-tertiary-container":"#ffab6a","tertiary-container":"#793d00","background":"#f9f9ff","error-container":"#ffdad6","surface-dim":"#ccdbf5","secondary-fixed-dim":"#acc7ff","inverse-on-surface":"#ebf1ff","inverse-primary":"#b3c5ff","tertiary-fixed-dim":"#ffb781","on-primary-fixed-variant":"#083fa2","secondary-fixed":"#d7e2ff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-desktop":"3rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-lg":["Manrope"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-xs":["Manrope"],"code-citation":["Inter"],"body-lg":["Inter"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-xl-mobile":["Manrope"],"label-md":["Inter"],"headline-lg-mobile":["Manrope"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xs":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-citation":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm"><div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop h-9 flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified</span>Royaume du Maroc — Recherche & Innovation</span><span class="hidden md:inline-flex items-center gap-space-xs text-outline-variant"><span class="material-symbols-outlined text-[14px]">mail</span>contact@msrasi.ma</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><a class="px-space-xs py-0.5 rounded text-inverse-on-surface hover:text-white font-bold" href="#">FR</a><span class="text-outline">|</span><a class="px-space-xs py-0.5 rounded text-outline-variant hover:text-white" href="#">AR</a><span class="text-outline">|</span><a class="px-space-xs py-0.5 rounded text-outline-variant hover:text-white" href="#">EN</a></div><span class="text-outline hidden sm:inline">|</span><a class="hidden sm:flex items-center gap-space-xs text-outline-variant hover:text-white transition-colors" data-path="espace-membre" href="#"><span class="material-symbols-outlined text-[14px]">lock</span>Espace Membre / Admin</a></div></div></div><div class="bg-surface/95 backdrop-blur-md"><div class="h-20 w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="MSRASI Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-none">MSRASI</span><span class="font-label-sm text-label-sm text-on-surface-variant hidden lg:block tracking-wider uppercase">Sciences Appliquées & Innovation</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="accueil" href="#">Accueil</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="a-propos" href="#">À propos</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="nos-activites" href="#">Nos activités</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="evenements" href="#">Événements</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="actualites" href="#">Actualités</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="relative inline-flex items-center justify-center px-space-md py-2.5 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-secondary transition-all shadow-[0_1px_3px_rgba(16,36,59,0.08)]" data-path="nous-rejoindre" href="#"><span class="flex items-center gap-space-xs">Nous rejoindre</span><span class="absolute -top-2 -right-2 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-1.5 py-0.5 rounded-full ring-2 ring-surface-container-lowest">POLE</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-[116px] bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Progress & Context Navigation Strip -->
+<div class="w-full bg-surface-container-low py-space-sm px-gutter-mobile lg:px-gutter-desktop shadow-sm">
+<div class="max-w-[1360px] mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-code-citation text-code-citation text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">home</span>
+          Accueil
+        </a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Événements</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">CISA-2025</span>
+<span>/</span>
+<span class="text-secondary font-bold">Inscription & Validation</span>
+</nav>
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock</span>
+          Portail Sécurisé CNDP Maroc
+        </span>
+<span class="h-3 w-px bg-outline-variant/40"></span>
+<span class="px-space-xs py-0.5 rounded bg-surface-variant text-primary font-bold">Code Session: CISA-OCT25</span>
+</div>
+</div>
+</div>
+<!-- Main Container -->
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop py-space-lg lg:py-space-xl">
+<!-- Hero / Event Context Badge Strip -->
+<div class="relative overflow-hidden rounded-xl bg-primary p-space-md lg:p-space-lg text-on-primary shadow-md mb-space-lg">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-20 w-64 h-64 rounded-full bg-surface-tint/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-lowest/15 text-primary-fixed text-label-sm font-label-sm uppercase tracking-wider">
+              Congrès International
+            </span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm font-label-sm font-bold">
+              Clôture des inscriptions : 30 Septembre
+            </span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm">
+              Indexé Scopus & Springer
+            </span>
+</div>
+<h1 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-white tracking-tight leading-tight">
+            Congrès International des Sciences Appliquées & IA 2025 (CISA-2025)
+          </h1>
+<p class="font-body-md text-body-md text-primary-fixed-dim flex flex-wrap items-center gap-x-space-md gap-y-1">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+              14–16 Octobre 2025
+            </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+              Faculté des Sciences / UM5, Rabat, Royaume du Maroc
+            </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+              450 Chercheurs & Industriels attendus
+            </span>
+</p>
+</div>
+<!-- View Mode Switcher -->
+<div class="bg-primary-container p-1 rounded-lg flex items-center gap-1 self-start lg:self-center shadow-inner">
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5" id="tabBtnForm" onclick="switchView('form')">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+            Formulaire Actif
+          </button>
+<button class="px-space-sm py-1.5 rounded font-label-md text-label-md text-on-primary-container hover:text-white transition-all flex items-center gap-1.5" id="tabBtnSuccess" onclick="switchView('success')">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+            Aperçu Confirmation
+          </button>
+</div>
+</div>
+</div>
+<!-- Dual Layout: Form on Left, Dynamic Status / Summary on Right -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- FORM COLUMN (8 Cols) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-space-lg transition-all duration-300" id="formContainer">
+<!-- Registration Form Card -->
+<form class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm space-y-space-xl" id="registrationForm" onsubmit="handleFormSubmit(event)">
+<!-- STEP 1: Personal Info -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-xs text-headline-xs">1</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Informations Personnelles</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Données académiques d'identification pour l'émargement officiel</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Étape 1/4</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1 sm:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface" for="fullName">Nom Complet & Titre Académique <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">badge</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="fullName" placeholder="ex. Pr. Amina EL ALAOUI" required="" type="text" value="Dr. Youssef BENKIRANE"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="email">Email Professionnel / Universitaire <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">alternate_email</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="email" placeholder="y.benkirane@um5.ac.ma" required="" type="email" value="y.benkirane@um5.ac.ma"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="phone">Téléphone Mobile (avec indicatif) <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">phone_iphone</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="phone" placeholder="+212 661-000000" required="" type="tel" value="+212 661 48 92 10"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="city">Ville de Résidence <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">location_city</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" id="city" placeholder="Rabat" required="" type="text" value="Rabat"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="country">Pays <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">flag</span>
+<select class="w-full h-11 pl-10 pr-8 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary appearance-none" id="country">
+<option selected="">Royaume du Maroc</option>
+<option>France</option>
+<option>Sénégal</option>
+<option>Tunisie</option>
+<option>Canada</option>
+<option>Émirats Arabes Unis</option>
+<option>Autre délégation internationale</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2: Affiliation & Scientific Role -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-xs text-headline-xs">2</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Affiliation & Statut Académique</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rattachement institutionnel pour la délivrance des actes du congrès</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Étape 2/4</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="institution">Université / Entreprise <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">account_balance</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="institution" placeholder="ex. Université Mohammed V de Rabat" required="" type="text" value="Université Mohammed V de Rabat"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="lab">Laboratoire / Équipe de Recherche</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-[18px] text-outline">biotech</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="lab" placeholder="ex. Labo IA, Télécom & Bio-Data" type="text" value="Laboratoire d'Informatique & Modélisation Appliquée (LIMA)"/>
+</div>
+</div>
+<div class="space-y-1 sm:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface mb-2">Statut du Participant <span class="text-error">*</span></label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input checked="" class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="enseignant"/>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Enseignant-Chercheur</span>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="doctorant"/>
+<span class="font-body-sm text-body-sm text-on-surface">Doctorant / Post-Doc</span>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="master"/>
+<span class="font-body-sm text-body-sm text-on-surface">Étudiant Master / Ingénieur</span>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="rd"/>
+<span class="font-body-sm text-body-sm text-on-surface">Ingénieur R&D Privé</span>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="industriel"/>
+<span class="font-body-sm text-body-sm text-on-surface">Industriel / Partenaire Tech</span>
+</label>
+<label class="flex items-center gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="academicStatus" type="radio" value="membre_msrasi"/>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Membre Actif MSRASI</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 3: Modality & Presentation Track -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-xs text-headline-xs">3</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Modalité de Participation & Travaux</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Présence physique au campus ou suivi distant en streaming académique</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Étape 3/4</span>
+</div>
+<!-- Modality switch -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between cursor-pointer shadow-sm hover:bg-surface-container transition-all" onclick="selectModality('onsite')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">apartment</span>
+<div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Présentiel à Rabat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Amphithéâtres Faculté des Sciences Rabat</p>
+</div>
+</div>
+<input checked="" class="w-4 h-4 text-primary mt-1" id="modOnsite" name="modality" type="radio" value="onsite"/>
+</div>
+<div class="mt-space-sm pt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">Badges nominatifs</span>
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">Pauses-café & Déjeuners</span>
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">Accès ateliers pratiques</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between cursor-pointer shadow-sm hover:bg-surface-container transition-all" onclick="selectModality('online')">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">cast_for_education</span>
+<div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">En Ligne / Hybride</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Plateforme interactive MSRASI Live Streaming</p>
+</div>
+</div>
+<input class="w-4 h-4 text-primary mt-1" id="modOnline" name="modality" type="radio" value="online"/>
+</div>
+<div class="mt-space-sm pt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">Replay 90 jours</span>
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">Chat Q&R en direct</span>
+<span class="px-2 py-0.5 text-[11px] rounded bg-surface-container text-on-surface">E-Attestation téléchargeable</span>
+</div>
+</div>
+</div>
+<!-- Participation Role -->
+<div class="space-y-space-xs">
+<label class="block font-label-md text-label-md text-on-surface">Rôle dans la conférence <span class="text-error">*</span></label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="p-3 rounded-lg bg-surface-bright flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="participationRole" onchange="togglePaperDetails(false)" type="radio" value="auditeur"/>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Auditeur Libre</span>
+<span class="text-[12px] text-on-surface-variant">Accès plénières & sessions</span>
+</div>
+</label>
+<label class="p-3 rounded-lg bg-surface-bright flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-all">
+<input checked="" class="w-4 h-4 text-primary" name="participationRole" onchange="togglePaperDetails(true)" type="radio" value="auteur_oral"/>
+<div>
+<span class="block font-label-md text-label-md text-primary font-bold">Communicant Oral</span>
+<span class="text-[12px] text-on-surface-variant">Présentation en session parallèle</span>
+</div>
+</label>
+<label class="p-3 rounded-lg bg-surface-bright flex items-center gap-space-sm cursor-pointer hover:bg-surface-container transition-all">
+<input class="w-4 h-4 text-primary" name="participationRole" onchange="togglePaperDetails(true)" type="radio" value="auteur_poster"/>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Poster Scientifique</span>
+<span class="text-[12px] text-on-surface-variant">Exposition hall & e-poster</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Paper Metadata block (Conditionally expanded) -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm" id="paperMetadataBox">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">article</span>
+                Détails de la communication acceptée
+              </div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="paperTitle">Titre de la Communication / Article <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-lowest text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="paperTitle" type="text" value="Deep Learning Optimization for Precision Irrigation in Arid Zones of Southern Morocco"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-1">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="trackId">Axe Thématique CISA</label>
+<select class="w-full h-11 px-3 rounded bg-surface-container-lowest text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="trackId">
+<option>Axe 1: IA, Modélisation & Vision Artificielle</option>
+<option>Axe 2: Énergies Vertes, Climat & Stress Hydrique</option>
+<option>Axe 3: Génie Biomédical & Biotechnologies</option>
+<option>Axe 4: Matériaux Avancés & Nanotechnologies</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="cmtCode">Numéro de Soumission (CMT / EasyChair)</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container-lowest font-code-citation text-code-citation text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="cmtCode" type="text" value="CISA-2025-SUB-194"/>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 4: Logistics & Compliance -->
+<section class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-xs text-headline-xs">4</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Logistique & Consentement Légal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Organisation sur site et conformité loi marocaine 09-08 (CNDP)</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Étape 4/4</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="diet">Régime Alimentaire (Déjeuners Officiels)</label>
+<select class="w-full h-11 px-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="diet">
+<option selected="">Standard (Gastronomie Marocaine & Internationale)</option>
+<option>Végétarien / Sans Viande</option>
+<option>Régime Sans Gluten</option>
+<option>Non applicable (Participation en ligne)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="block font-label-md text-label-md text-on-surface" for="certificate">Attestation Spécifique Demandée</label>
+<select class="w-full h-11 px-3 rounded bg-surface-bright text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary" id="certificate">
+<option selected="">Attestation de Présentation Orale & Participation</option>
+<option>Attestation de Participation Simple (Auditeur)</option>
+<option>Certificat de Prise en Charge Ordre de Mission</option>
+</select>
+</div>
+</div>
+<!-- Checkbox Declarations -->
+<div class="space-y-space-sm pt-space-xs">
+<label class="flex items-start gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-0" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  Je certifie l'exactitude des informations fournies et j'accepte que les données soient traitées par le secrétariat général de la <strong>MSRASI</strong> conformément à la loi marocaine n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel.
+                </span>
+</label>
+<label class="flex items-start gap-space-sm p-3 rounded-lg bg-surface-bright cursor-pointer hover:bg-surface-container transition-all">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  J'autorise la prise de vues photographiques et l'enregistrement vidéo lors des plénières pour les actes et publications de l'association.
+                </span>
+</label>
+</div>
+</section>
+<!-- Submit CTA Group -->
+<div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">info</span>
+<span>Validation instantanée sans frais préalables pour membres académiques</span>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-bold shadow-md transition-all flex items-center justify-center gap-space-sm" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+<span>Confirmer et valider mon inscription</span>
+</button>
+</div>
+</form>
+<!-- Academic Keynote Context Feature Card (matches conference amphitheater visual) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col md:flex-row gap-space-md items-center">
+<img class="w-full md:w-56 h-40 object-cover rounded-lg shadow-inner" data-alt="A wide angle photograph of a modern Moroccan academic university auditorium packed with students and researchers during an AI and biotechnology symposium keynote presentation. A female scientist in a navy blazer stands at the podium addressing the audience with an illuminated presentation screen displaying genomic algorithms and neural networks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmgUKUj-LZqhh_lsK2hNPtwz9CtFd7Eqmi3SoMYwz_HAGTeqIt1txDeFiQDsqrTivVbaSujC5TKVe3h49kahr0qgLSsmTNgjtE1HrMRJNada7TsXKBmA7h6vM5PShXUnRIooT96rhxuVCB6IL1q0GOUNnfMxNuZ19K5erxoUdtYByjHe834G5VbcxYxSp7gz9NRT9ju1njxmxtbhS-a2ocDsNU1kL2U0e8GmaB1ds"/>
+<div class="space-y-1">
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">podium</span>
+              Session Plénière Inaugurale
+            </div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface">"IA & Biotechnologies : Catalyseurs du Nouveau Modèle de Développement"</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Conférence d'ouverture prononcée le Mardi 14 Octobre 2025 à 09h30 au Grand Amphithéâtre de la Faculté des Sciences de Rabat en présence des délégations ministérielles.
+            </p>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold pt-1">
+              Accès garanti pour tous les inscrits validés
+              <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+</div>
+<!-- SIDEBAR & SUCCESS PREVIEW COLUMN (5 Cols) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-lg" id="sideContainer">
+<!-- Interactive Success Card (Live Demo Preview / Active State) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-md transition-all" id="successCard">
+<!-- Success State Header -->
+<div class="flex items-start gap-space-sm pb-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px] font-bold">check</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-label-sm font-label-sm font-bold uppercase tracking-wider">État : Validé</span>
+<span class="text-on-surface-variant text-[12px] font-code-citation">Ref: Auto-Générée</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Inscription confirmée avec succès !</h3>
+</div>
+</div>
+<!-- Official Reference Plate -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-xs mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Numéro d'enregistrement</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<div class="font-headline-xs text-headline-xs text-primary font-mono font-bold tracking-wide" id="dispRef">
+              REF-MSRASI-2025-0842
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-1 leading-relaxed">
+              Votre demande d'inscription au congrès <strong>CISA-2025</strong> a été enregistrée avec succès. Un email contenant votre convocation officielle, votre badge d'accès QR-Code et le recueil préliminaire des résumés a été transmis à votre adresse.
+            </p>
+</div>
+<!-- Ticket-like Quick Specs -->
+<div class="space-y-space-sm mb-space-md font-body-sm text-body-sm">
+<div class="flex items-center justify-between py-1 bg-surface-bright px-3 rounded">
+<span class="text-on-surface-variant">Participant</span>
+<span class="font-semibold text-on-surface" id="dispName">Dr. Youssef BENKIRANE</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-bright px-3 rounded">
+<span class="text-on-surface-variant">Statut Académique</span>
+<span class="font-semibold text-on-surface" id="dispRole">Enseignant-Chercheur (Communicant)</span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-bright px-3 rounded">
+<span class="text-on-surface-variant">Modalité</span>
+<span class="inline-flex items-center gap-1 font-semibold text-secondary" id="dispMod">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Présentiel (Rabat)
+              </span>
+</div>
+<div class="flex items-center justify-between py-1 bg-surface-bright px-3 rounded">
+<span class="text-on-surface-variant">Lieu</span>
+<span class="font-semibold text-on-surface">Amphi Hassan II, FS-UM5</span>
+</div>
+</div>
+<!-- Simulated QR Code Strip for Badge Validation -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-space-md mb-space-md">
+<div class="w-16 h-16 bg-white p-1 rounded shadow-inner flex items-center justify-center shrink-0">
+<!-- Visual Mock QR using pure SVG -->
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v2h-4v-2zm-4 0h2v4h-2v-4zm2 4h4v2h-4v-2zm2-2h2v2h-2v-2zm-4-4h2v2h-2v-2zm6 0h2v2h-2v-2zM6 6h2v2H6V6zm12 0h2v2h-2V6zm-12 12h2v2H6v-2z"></path>
+</svg>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Badge E-Accès Rapide</span>
+<p class="text-[12px] text-on-surface-variant">Présentez ce QR Code lors de l'enregistrement aux bornes du Hall Central.</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-space-xs">
+<button class="w-full py-2.5 px-space-md rounded bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-bold shadow-sm transition-all flex items-center justify-center gap-2" onclick="downloadBadgeMock()">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+              Télécharger mon Badge d'accès PDF
+            </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-space-xs rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1" onclick="addToCalendarMock()">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_add_on</span>
+                Ajouter Agenda
+              </button>
+<a class="py-2 px-space-xs rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_back</span>
+                Nos Événements
+              </a>
+</div>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">support_agent</span>
+            Besoin d'assistance ? <a class="text-primary underline ml-1" href="#">secretariat@msrasi.ma</a>
+</div>
+</div>
+<!-- Venue Summary & Moroccan Academic Map Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-xs text-headline-xs text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">pin_drop</span>
+              Lieu de Tenue du Congrès
+            </h4>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded">Rabat, Maroc</span>
+</div>
+<!-- Location Trigger Div -->
+<div class="w-full h-44 bg-cover bg-center rounded-lg shadow-inner relative overflow-hidden group" data-location="Faculte des Sciences Universite Mohammed V Rabat Maroc" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCec5_ElvTfCOE6Rovlt10tFj7YBUb7lj0nzIE6L5RMQtMQ92obRxnjm0foV_W0QDr1VlZi64e940b2-6mrVWGfiPJIDBjK0pEPXGA5ag8R-E10IrW87Lkwd0-bMjrUC8X45RDbvtYKjSj0BqPT5y_WBft0J9W8nUgHlphIa4TczxB_-67VZQdSQuqCFha61D_dioHNUnAN6FsDMPTGUyOCpwg5dO1rSLTz3S39TIE')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-3">
+<p class="text-white text-body-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">navigation</span>
+                Avenue Ibn Battouta, Agdal - Rabat
+              </p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low text-body-sm text-body-sm text-on-surface-variant space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">train</span>
+<span>Gare Rabat-Agdal : à 7 minutes en taxi</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">local_parking</span>
+<span>Parking surveillé réservé aux congressistes</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">hotel</span>
+<span>Hôtels partenaires avec tarif préférentiel MSRASI</span>
+</div>
+</div>
+</div>
+<!-- Scientific Committee Guarantee Stamp -->
+<div class="p-space-md rounded-xl bg-surface-container text-on-surface flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[28px] shrink-0">verified</span>
+<div class="space-y-1">
+<h5 class="font-headline-xs text-headline-xs">Label d'Excellence MSRASI</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Les communications orales présentées feront l'objet d'une sélection par les pairs pour publication dans le <em>Journal Marocain des Sciences Appliquées & Technologies</em>.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMsg">Inscription validée et transmise au secrétariat.</span>
+</div>
+</div>
+</div>
+<script>
+  function togglePaperDetails(show) {
+    const box = document.getElementById('paperMetadataBox');
+    if (!box) return;
+    if (show) {
+      box.classList.remove('hidden');
+    } else {
+      box.classList.add('hidden');
+    }
+  }
+
+  function selectModality(type) {
+    const modOnsite = document.getElementById('modOnsite');
+    const modOnline = document.getElementById('modOnline');
+    const dispMod = document.getElementById('dispMod');
+
+    if (type === 'onsite') {
+      if (modOnsite) modOnsite.checked = true;
+      if (dispMod) {
+        dispMod.innerHTML = '<span class="w-2 h-2 rounded-full bg-secondary"></span> Présentiel (Rabat)';
+      }
+    } else {
+      if (modOnline) modOnline.checked = true;
+      if (dispMod) {
+        dispMod.innerHTML = '<span class="w-2 h-2 rounded-full bg-tertiary"></span> Distanciel (Webinaire HD)';
+      }
+    }
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const fullName = document.getElementById('fullName').value || 'Participant CISA-2025';
+    const dispName = document.getElementById('dispName');
+    const dispRef = document.getElementById('dispRef');
+    
+    if (dispName) dispName.textContent = fullName;
+    
+    // Generate simulated reference code
+    const randNum = Math.floor(1000 + Math.random() * 9000);
+    if (dispRef) dispRef.textContent = 'REF-MSRASI-2025-' + randNum;
+
+    showToast('Félicitations ' + fullName + ', votre inscription CISA-2025 est validée !');
+
+    // Highlight confirmation side card
+    const successCard = document.getElementById('successCard');
+    if (successCard) {
+      successCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      successCard.classList.add('scale-[1.02]');
+      setTimeout(() => {
+        successCard.classList.remove('scale-[1.02]');
+      }, 500);
+    }
+  }
+
+  function switchView(view) {
+    const tabForm = document.getElementById('tabBtnForm');
+    const tabSuccess = document.getElementById('tabBtnSuccess');
+    const formContainer = document.getElementById('formContainer');
+    const sideContainer = document.getElementById('sideContainer');
+    const successCard = document.getElementById('successCard');
+
+    if (view === 'form') {
+      tabForm.className = "px-space-sm py-1.5 rounded font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5";
+      tabSuccess.className = "px-space-sm py-1.5 rounded font-label-md text-label-md text-on-primary-container hover:text-white transition-all flex items-center gap-1.5";
+      if (formContainer) formContainer.classList.remove('hidden');
+      if (sideContainer) {
+        sideContainer.classList.remove('lg:col-span-12');
+        sideContainer.classList.add('lg:col-span-5', 'xl:col-span-4');
+      }
+    } else {
+      tabSuccess.className = "px-space-sm py-1.5 rounded font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5";
+      tabForm.className = "px-space-sm py-1.5 rounded font-label-md text-label-md text-on-primary-container hover:text-white transition-all flex items-center gap-1.5";
+      // Focus on success preview
+      if (successCard) {
+        successCard.scrollIntoView({ behavior: 'smooth' });
+      }
+      showToast('Aperçu de la confirmation finale avec badge d’accès.');
+    }
+  }
+
+  function downloadBadgeMock() {
+    showToast('Génération du badge PDF sécurisé avec QR-Code...');
+  }
+
+  function addToCalendarMock() {
+    showToast('Fichier iCalendar CISA-2025 exporté avec succès.');
+  }
+
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msg = document.getElementById('toastMsg');
+    if (!toast || !msg) return;
+    msg.textContent = message;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 4000);
+  }
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface"><div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary-fixed text-[28px]">star</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-white">MSRASI</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Royaume du Maroc</span></div></div><p class="font-body-sm text-body-sm text-outline-variant pr-space-lg">Association Marocaine pour la Recherche en Sciences Appliquées et l'Innovation. Fédérer les chercheurs, valoriser le capital scientifique national et catalyser l'innovation technologique à impact socio-économique.</p><div class="flex items-center gap-space-sm"><span class="px-space-sm py-1 rounded bg-surface-container/10 font-label-sm text-label-sm text-tertiary-fixed">Édition Académique</span><span class="px-space-sm py-1 rounded bg-surface-container/10 font-label-sm text-label-sm text-secondary-fixed">Pôles Régionaux</span></div></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Navigation</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li data-path="accueil"><a class="text-outline-variant hover:text-white transition-colors" data-path="accueil" href="#">Accueil</a></li><li data-path="a-propos"><a class="text-outline-variant hover:text-white transition-colors" data-path="a-propos" href="#">Mission & Conseil Scientifique</a></li><li data-path="nos-activites"><a class="text-outline-variant hover:text-white transition-colors" data-path="nos-activites" href="#">Programmes de Recherche</a></li><li data-path="evenements"><a class="text-outline-variant hover:text-white transition-colors" data-path="evenements" href="#">Symposiums & Congrès</a></li><li data-path="actualites"><a class="text-outline-variant hover:text-white transition-colors" data-path="actualites" href="#">Publications & Revues</a></li></ul></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Pôles d'Excellence</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-outline-variant"><li>Intelligence Artificielle & Data</li><li>Énergies Renouvelables & Eau</li><li>Biotechnologies Médicales</li><li>Génie des Matériaux Avancés</li><li>Économie Circulaire & Climat</li></ul></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Contact & Siège</h4><div class="space-y-space-xs font-body-sm text-body-sm text-outline-variant"><p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed mt-1">location_on</span><span>Campus Universitaire Al Irfane, Rabat & Casablanca Technopark, Maroc</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">mail</span><span>secretariat@msrasi.ma</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">call</span><span>+212 (0) 537 00 00 00</span></p></div><div class="pt-space-sm"><a class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary-fixed-dim hover:text-white transition-colors" data-path="portail-administration" href="#"><span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>Portail d'Administration</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-label-sm font-label-sm text-outline"><p>© 2025 MSRASI - Association Marocaine pour la Recherche en Sciences Appliquées et l'Innovation. Tous droits réservés.</p><div class="flex items-center gap-space-md"><a class="hover:text-white transition-colors" href="#">Mentions légales</a><a class="hover:text-white transition-colors" href="#">Politique scientifique & Éthique</a><a class="hover:text-white transition-colors" href="#">Charte de publication</a></div></div></div></footer></body></html>

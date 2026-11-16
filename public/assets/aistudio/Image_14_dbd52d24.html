@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#0d1c30","on-error":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#233145","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004492","primary-fixed":"#dbe1ff","surface-container-low":"#f0f3ff","primary-container":"#1646a8","tertiary":"#572a00","error":"#ba1a1a","on-tertiary-fixed-variant":"#6f3800","surface-bright":"#f9f9ff","surface-container-high":"#dee9ff","surface":"#f9f9ff","on-error-container":"#93000a","on-surface-variant":"#434652","outline":"#747684","outline-variant":"#c4c6d4","surface-variant":"#d5e3fe","primary":"#003082","on-secondary-container":"#003371","on-primary-fixed":"#00184a","on-secondary":"#ffffff","primary-fixed-dim":"#b3c5ff","surface-container":"#e7eeff","secondary":"#115cba","on-background":"#0d1c30","surface-tint":"#2f59bb","surface-container-highest":"#d5e3fe","secondary-container":"#659dff","on-primary-container":"#a7bcff","on-tertiary-fixed":"#2f1400","on-secondary-fixed":"#001a40","tertiary-fixed":"#ffdcc4","on-tertiary-container":"#ffab6a","tertiary-container":"#793d00","background":"#f9f9ff","error-container":"#ffdad6","surface-dim":"#ccdbf5","secondary-fixed-dim":"#acc7ff","inverse-on-surface":"#ebf1ff","inverse-primary":"#b3c5ff","tertiary-fixed-dim":"#ffb781","on-primary-fixed-variant":"#083fa2","secondary-fixed":"#d7e2ff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-desktop":"3rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-lg":["Manrope"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-xs":["Manrope"],"code-citation":["Inter"],"body-lg":["Inter"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-xl-mobile":["Manrope"],"label-md":["Inter"],"headline-lg-mobile":["Manrope"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xs":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-citation":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm"><div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop h-9 flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified</span>Royaume du Maroc — Recherche & Innovation</span><span class="hidden md:inline-flex items-center gap-space-xs text-outline-variant"><span class="material-symbols-outlined text-[14px]">mail</span>contact@msrasi.ma</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><a class="px-space-xs py-0.5 rounded text-inverse-on-surface hover:text-white font-bold" href="#">FR</a><span class="text-outline">|</span><a class="px-space-xs py-0.5 rounded text-outline-variant hover:text-white" href="#">AR</a><span class="text-outline">|</span><a class="px-space-xs py-0.5 rounded text-outline-variant hover:text-white" href="#">EN</a></div><span class="text-outline hidden sm:inline">|</span><a class="hidden sm:flex items-center gap-space-xs text-outline-variant hover:text-white transition-colors" data-path="espace-membre" href="#"><span class="material-symbols-outlined text-[14px]">lock</span>Espace Membre / Admin</a></div></div></div><div class="bg-surface/95 backdrop-blur-md"><div class="h-20 w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="MSRASI Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-none">MSRASI</span><span class="font-label-sm text-label-sm text-on-surface-variant hidden lg:block tracking-wider uppercase">Sciences Appliquées & Innovation</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a aria-current="page" class="transition-colors py-2 text-primary font-semibold border-b-2 border-primary" data-path="accueil" href="#">Accueil</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="a-propos" href="#">À propos</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="nos-activites" href="#">Nos activités</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="evenements" href="#">Événements</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="actualites" href="#">Actualités</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="relative inline-flex items-center justify-center px-space-md py-2.5 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-secondary transition-all shadow-[0_1px_3px_rgba(16,36,59,0.08)]" data-path="nous-rejoindre" href="#"><span class="flex items-center gap-space-xs">Nous rejoindre</span><span class="absolute -top-2 -right-2 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold px-1.5 py-0.5 rounded-full ring-2 ring-surface-container-lowest">POLE</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-[116px] bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO SECTION -->
+<section class="relative w-full bg-[#10243B] text-white overflow-hidden py-16 lg:py-24">
+<!-- Moroccan star & scientific constellation vector background -->
+<div class="absolute inset-0 pointer-events-none opacity-10">
+<svg class="w-full h-full object-cover" fill="none" viewbox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="140" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></circle>
+<circle cx="1200" cy="400" r="220" stroke="currentColor" stroke-dasharray="6 6" stroke-width="1"></circle>
+<path d="M150 150 L350 450 L720 200 L950 500 L1300 250" stroke="currentColor" stroke-width="1.5"></path>
+<circle cx="150" cy="150" fill="#659dff" r="6"></circle>
+<circle cx="350" cy="450" fill="#ffdcc4" r="5"></circle>
+<circle cx="720" cy="200" fill="#659dff" r="7"></circle>
+<circle cx="950" cy="500" fill="#087a4b" r="6"></circle>
+<circle cx="1300" cy="250" fill="#ffdcc4" r="8"></circle>
+<!-- Moroccan 8-point subtle geometric rosette center -->
+<g stroke="currentColor" stroke-width="1" transform="translate(1150, 650) scale(1.4)">
+<polygon points="0,-60 18,-18 60,0 18,18 0,60 -18,18 -60,0 -18,-18"></polygon>
+<polygon points="-42,-42 0,-25 42,-42 25,0 42,42 0,25 -42,42 -25,0"></polygon>
+</g>
+</svg>
+</div>
+<div class="relative w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Vision & Actions -->
+<div class="lg:col-span-6 flex flex-col space-y-6">
+<div class="inline-flex items-center gap-space-xs self-start px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">hub</span>
+<span>Réseau National d'Excellence & Innovation</span>
+</div>
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-white tracking-tight leading-tight">
+            La science inspire.<br/>
+            L'innovation transforme.<br/>
+<span class="text-secondary-fixed-dim">L'avenir se construit ensemble.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-slate-300 max-w-xl">
+            La MSRASI œuvre pour promouvoir la recherche en sciences appliquées, encourager l'innovation et créer des opportunités de collaboration scientifique à l'échelle nationale et internationale.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-white font-label-md text-label-md hover:bg-[#F58200] transition-colors shadow-lg shadow-black/20" href="#activites">
+<span>Découvrir nos activités</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-white/5 hover:bg-white/10 text-white font-label-md text-label-md transition-colors shadow-sm" href="#evenements">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">calendar_month</span>
+<span>Explorer les événements</span>
+</a>
+</div>
+<!-- Academic Affiliation Note -->
+<div class="pt-4 flex items-center gap-4 text-slate-400 font-code-citation text-code-citation">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-emerald-400">verified</span>
+              Partenaire Académique Accrédité
+            </span>
+<span>•</span>
+<span>Pôles Universitaires Régionaux</span>
+</div>
+</div>
+<!-- Right Column: Research Photo Editorial Presentation + Floating Metric Pills -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full rounded-2xl overflow-hidden bg-slate-900 shadow-2xl">
+<img alt="Laboratoire national MSRASI recherche appliquée et photonique" class="w-full h-[440px] lg:h-[500px] object-cover object-center transform hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4SPq8TedhJU3hgJ0IHuTeWMmltng7pl6lyFBs_4kgHQ5V9gP1-CURvvBfh6Z8O9eQUVzsx_UZMYPIkjS2xmRCvdOQlyAxINo13v9CyifWIbbOO7bH8f1vuKtNVUKmvMiFWGKzICQveMuqMooba4UpvBL7UmUlQ-CH5uzjntxVirURZJlfRxTStAXAM8RbxPlMxeLL0AnEwuZQcgli-hJCHTKdXLT51TialMhiUk4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#10243B]/90 via-[#10243B]/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-slate-300">
+<span class="font-code-citation text-code-citation px-2.5 py-1 rounded bg-black/40 backdrop-blur-md">Pôle Nanotechnologies & Énergies — Rabat</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Laboratoire Ouvert</span>
+</div>
+</div>
+<!-- Floating Metric 1 (Top Left Overlap) -->
+<div class="absolute -top-6 -left-4 sm:left-4 bg-white text-on-surface p-4 rounded-xl shadow-xl flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">+1,200</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Chercheurs & Étudiants</div>
+</div>
+</div>
+<!-- Floating Metric 2 (Bottom Right Overlap) -->
+<div class="absolute -bottom-6 -right-2 sm:right-4 bg-white text-on-surface p-4 rounded-xl shadow-xl flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-[#F58200]">
+<span class="material-symbols-outlined text-[26px]">science</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">34 Projets</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">R&D Soutenus en 2024-25</div>
+</div>
+</div>
+<!-- Floating Metric 3 (Right Mid) -->
+<div class="hidden sm:flex absolute top-1/2 -right-6 transform -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-lg shadow-lg items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">workspace_premium</span>
+<span class="font-label-md text-label-md">18 Brevets & Publications</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: ABOUT THE ASSOCIATION -->
+<section class="w-full py-20 bg-surface" id="a-propos">
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Mission, Vision, and 4 Core Strategic Objectives -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">account_balance</span>
+<span>Fondation & Vision</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Une association tournée vers la connaissance et l'innovation.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Fondée sous les auspices de la communauté universitaire et industrielle du Royaume du Maroc, la <strong class="text-on-surface font-semibold">MSRASI</strong> réunit scientifiques de haut niveau, doctorants et entrepreneurs technologiques pour transformer la recherche fondamentale en retombées tangibles pour l'économie nationale.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+<!-- Strategic 1 -->
+<div class="p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Excellence Académique</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Encadrement méthodologique et accès aux revues indexées pour stimuler des travaux à fort impact mondial.
+              </p>
+</div>
+<!-- Strategic 2 -->
+<div class="p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-9 h-9 rounded-lg bg-[#087a4b] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">conversion_path</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Transfert Technologique</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Passerelles concrètes entre brevets de laboratoire et industrialisation locale par des spin-offs durables.
+              </p>
+</div>
+<!-- Strategic 3 -->
+<div class="p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-9 h-9 rounded-lg bg-[#F58200] text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">emoji_people</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Mentorat Scientifique</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Accompagnement personnalisé des doctorants marocains par des experts de la diaspora et de l'étranger.
+              </p>
+</div>
+<!-- Strategic 4 -->
+<div class="p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-9 h-9 rounded-lg bg-secondary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface">Rayonnement Mondial</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Accords multilatéraux avec les laboratoires d'Afrique, d'Europe et d'Amérique du Nord.
+              </p>
+</div>
+</div>
+</div>
+<!-- Right: Institutional Highlight Card & Ecosystem Badges -->
+<div class="lg:col-span-5 flex flex-col space-y-6">
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-[#E6F5EE] text-[#087a4b] font-semibold">Organisme Agréé</span>
+<span class="font-code-citation text-code-citation text-on-surface-variant">Statut Loi 75-00</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">
+                Un hub scientifique national pluridisciplinaire
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Chaque initiative de la MSRASI répond aux orientations de la Stratégie Nationale de Développement de la Recherche Scientifique à l'horizon 2030, axée sur la souveraineté technologique, médicale et énergétique du Maroc.
+              </p>
+<!-- Mini Data Visualization: Focus Distribution -->
+<div class="p-4 rounded-xl bg-surface-container mb-6">
+<div class="font-label-md text-label-md text-on-surface mb-2 font-bold flex justify-between">
+<span>Répartition des Chaires de Recherche</span>
+<span>100%</span>
+</div>
+<!-- Inline SVG Bar Representation -->
+<div class="w-full h-3 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 40%" title="Sciences Numériques & IA (40%)"></div>
+<div class="h-full bg-[#087a4b]" style="width: 30%" title="Énergie, Eau & Matériaux (30%)"></div>
+<div class="h-full bg-[#F58200]" style="width: 20%" title="Biotechnologie & Santé (20%)"></div>
+<div class="h-full bg-secondary-container" style="width: 10%" title="Sciences Humaines Appliquées (10%)"></div>
+</div>
+<div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 font-code-citation text-code-citation text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span> IA & Data 40%</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#087a4b]"></span> Énergie & Climat 30%</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#F58200]"></span> Bio-Santé 20%</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-between w-full py-3 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md transition-colors" href="#pôles">
+<span>Découvrir notre association & gouvernance</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</a>
+</div>
+<!-- Ecosystem Quote -->
+<div class="p-6 rounded-xl bg-inverse-surface text-inverse-on-surface flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed text-[32px] shrink-0">format_quote</span>
+<div>
+<p class="font-body-sm text-body-sm italic text-slate-300">
+                « La valorisation des talents scientifiques marocains est la condition première pour bâtir une nation résiliente et pionnière des technologies émergentes. »
+              </p>
+<div class="font-label-sm text-label-sm font-bold text-white mt-2">Pr. Mohammed Al-Khatib — Président du Conseil Scientifique</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SCIENTIFIC FIELDS AND ACTIVITIES -->
+<section class="w-full py-20 bg-surface-container-low" id="activites">
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-[16px]">interests</span>
+<span>Champs d'Action</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Nos Domaines & Pôles Scientifiques
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Des programmes intégrés conçus pour catalyser la découverte, outiller les équipes de recherche et relier le laboratoire à la société.
+          </p>
+</div>
+<div class="mt-4 md:mt-0 font-code-citation text-code-citation text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_stories</span>
+          6 Pôles Opérationnels Actifs
+        </div>
+</div>
+<!-- 6 Scientific Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Field 1 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">biotech</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider mb-1">Axe 01</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Recherche Scientifique Appliquée</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Biotechnologies végétales et médicales, nanomatériaux pour le dessalement de l'eau et modélisation de santé prédictive.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>12 Projets en cours</span>
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Field 2 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#F58200]/10 text-[#F58200] flex items-center justify-center mb-5 group-hover:bg-[#F58200] group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">memory</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#F58200] uppercase font-bold tracking-wider mb-1">Axe 02</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Innovation & Nouvelles Technologies</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Intelligence artificielle explicable, réseaux de capteurs IoT industriels, cybersécurité et pilotage d'énergies renouvelables (Smart Grids).
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>8 Chaires IA & Data</span>
+<span class="material-symbols-outlined text-[18px] text-[#F58200] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Field 3 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#087a4b]/10 text-[#087a4b] flex items-center justify-center mb-5 group-hover:bg-[#087a4b] group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<div class="font-label-sm text-label-sm text-[#087a4b] uppercase font-bold tracking-wider mb-1">Axe 03</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Formation & Éducation Scientifique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Masterclasses doctorales certifiées, bootcamps en rédaction d'articles indexés et méthodologies de recherche computationnelle.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>650 Diplômés certifiés</span>
+<span class="material-symbols-outlined text-[18px] text-[#087a4b] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Field 4 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-5 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">record_voice_over</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider mb-1">Axe 04</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Conférences & Congrès Internationaux</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Organisation de symposiums majeurs réunissant lauréats, membres de la diaspora marocaine et experts de classe mondiale.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>4 Événements majeurs / an</span>
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Field 5 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-purple-700/10 text-purple-700 flex items-center justify-center mb-5 group-hover:bg-purple-700 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<div class="font-label-sm text-label-sm text-purple-700 uppercase font-bold tracking-wider mb-1">Axe 05</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ateliers Pratiques & FabLabs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Laboratoires ouverts pour le prototypage rapide, bancs d'essai en microélectronique et caractérisation de composants physiques.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>3 Espaces Maker équipés</span>
+<span class="material-symbols-outlined text-[18px] text-purple-700 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Field 6 -->
+<div class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-teal-700/10 text-teal-700 flex items-center justify-center mb-5 group-hover:bg-teal-700 group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[26px]">handshake</span>
+</div>
+<div class="font-label-sm text-label-sm text-teal-700 uppercase font-bold tracking-wider mb-1">Axe 06</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Liaison & Partenariats Industriels</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Interface dédiée au cofinancement R&D entre grands groupes marocains (énergie, phosphates, aéronautique) et laboratoires.
+            </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-on-surface-variant font-code-citation text-code-citation">
+<span>19 Conventions actives</span>
+<span class="material-symbols-outlined text-[18px] text-teal-700 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: UPCOMING EVENTS (KEY FOCUS SECTION) -->
+<section class="w-full py-20 bg-surface" id="evenements">
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<!-- Section Header & Filter Pills -->
+<div class="flex flex-col space-y-6 mb-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E6F5EE] text-[#087a4b] font-label-sm text-label-sm uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">event_available</span>
+<span>Agenda Scientifique 2025 - 2026</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+              Nos prochains rendez-vous scientifiques
+            </h2>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors self-start md:self-auto" href="#">
+<span>Voir le calendrier complet</span>
+<span class="material-symbols-outlined text-[18px]">calendar_view_month</span>
+</a>
+</div>
+<!-- Interactive Category Badges Filter Bar -->
+<div class="flex flex-wrap items-center gap-2 pt-2">
+<button class="px-4 py-2 rounded-full bg-primary text-white font-label-md text-label-md shadow-sm">
+            Tous les événements
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">
+            Conférences
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">
+            Ateliers
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">
+            Formations
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">
+            Compétitions & Hackathons
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">
+            Séminaires
+          </button>
+</div>
+</div>
+<!-- FEATURED EVENT (LARGE EDITORIAL FORMAT) -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Image with Date Overlay -->
+<div class="lg:col-span-6 relative min-h-[300px] lg:min-h-[420px]">
+<img alt="Congrès International des Sciences Appliquées et Intelligence Artificielle Rabat 2025" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYYxT36X0EF4Znqx68mP24HKZA-oDX7xoNEVLbu2et1hFaQCaf--YqUzXJ60Ct7-fPTG-1jXFwTmGxJB5zYIUC-ulGrVQris69m1mDcnEDi0vy-vURVjnmdN9N-kctCGaM0FG4jPGm-FluDmv0X-tjZNisNEU21t8FmrtBTqM12c_5EJwPb7FH0qpjqhy309mU4bo-J14oBBfk_73DLYuYa5SuP9SdtEInbRWRIgc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Dark Date Box -->
+<div class="absolute top-6 left-6 bg-[#10243B] text-white px-4 py-3 rounded-xl shadow-lg flex flex-col items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container">OCT</span>
+<span class="font-headline-lg text-headline-lg font-bold leading-none my-1">14-16</span>
+<span class="font-code-citation text-code-citation text-slate-300">2025</span>
+</div>
+<!-- Urgent Callout Badge -->
+<div class="absolute bottom-6 left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E6F5EE] text-[#087a4b] font-label-md text-label-md shadow-md">
+<span class="w-2 h-2 rounded-full bg-[#087a4b] animate-ping"></span>
+<span>Inscriptions & Call for Papers Ouverts</span>
+</div>
+</div>
+<!-- Content Details & Countdown -->
+<div class="lg:col-span-6 p-8 lg:p-10 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2.5 py-1 rounded bg-[#EAF2FC] text-primary font-label-sm text-label-sm font-semibold">Symposium International</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                  Campus UM5 / Al Irfane, Rabat & Hybride
+                </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4 leading-snug">
+                Congrès International des Sciences Appliquées & IA 2025
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Le grand rendez-vous biennal de la recherche marocaine. Trois jours pléniers, 40 sessions thématiques, des démonstrations technologiques immersives et la participation des académies scientifiques d'Europe et d'Afrique.
+              </p>
+<!-- Key Metadata Grid -->
+<div class="grid grid-cols-3 gap-4 p-4 rounded-xl bg-surface-container-low mb-6 text-center">
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">450+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Participants</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">60</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Conférenciers</div>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary">12</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Workshops Hands-on</div>
+</div>
+</div>
+</div>
+<!-- Action & Live Countdown Indicator -->
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 self-start sm:self-auto font-code-citation text-code-citation text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-tertiary">timer</span>
+<span>Date limite soumission résumés : <strong>30 Août 2025</strong></span>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary hover:bg-secondary text-white font-label-md text-label-md transition-colors shadow-sm" href="#">
+<span>Découvrir l'événement</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- GRID OF 3 REGULAR EVENT CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<!-- Regular Card 1 (with Image 15) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between">
+<div>
+<div class="relative h-44 w-full">
+<img alt="Atelier Pratique Prototypage Robotique Casablanca" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByecvU2ZNQirfVAPDpq2bEzg1heSrHoVj6RsapTCJVxtz5afs0zyqcfB7zNef9FJ9753N87kjwGiTX6QWwxLGRmCLnZGtARkViwzfq4yAcM5FBgCaGYMYtIZJKyQViJaXC6k5n7sNz4uSMwwcGUefyfttnNZnSsCVPMt7cFvS76OsLhY6kh-rx-NHUVrfPxjpWDMS8CrJmCAzUJXsVfouLL_xmqW1UZBLsWuwTCZA"/>
+<div class="absolute top-3 left-3 bg-[#10243B] text-white px-2.5 py-1.5 rounded-lg text-center font-bold text-xs shadow-md">
+                28 NOV 2025
+              </div>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-white/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-semibold">Atelier Pratique</span>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Casablanca Technopark</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2 line-clamp-2">
+                Atelier Pratique: Prototypage Robotique & Capteurs IoT
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Session intensive de 8 heures dédiée à l'intégration matérielle de micro-contrôleurs basse consommation pour l'agriculture connectée.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-[#087a4b] font-semibold">25 places restantes</span>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary" href="#">
+<span>S'inscrire</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Regular Card 2 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between">
+<div>
+<div class="p-6 bg-gradient-to-br from-primary-container to-secondary text-white relative">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-white/20 px-2.5 py-1.5 rounded-lg text-center font-bold text-xs">
+                  12 DÉC 2025
+                </div>
+<span class="px-2.5 py-1 rounded-full bg-white/20 text-white font-label-sm text-label-sm">Symposium</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold leading-tight">
+                Transition Énergétique & Hydrogène Vert
+              </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Université Cadi Ayyad, Marrakech</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+                Symposium National sur l'Hydrogène & Décarbonation
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Réunissant chimistes, ingénieurs et opérateurs d'infrastructures pour faire le point sur la filière d'électrolyse solaire nationale.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accès Libre sur Accréditation</span>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary" href="#">
+<span>Consulter</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Regular Card 3 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between">
+<div>
+<div class="p-6 bg-gradient-to-br from-tertiary-container to-[#572a00] text-white relative">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-white/20 px-2.5 py-1.5 rounded-lg text-center font-bold text-xs">
+                  15-17 JAN 2026
+                </div>
+<span class="px-2.5 py-1 rounded-full bg-white/20 text-white font-label-sm text-label-sm">Hackathon</span>
+</div>
+<div class="font-headline-sm text-headline-sm font-bold leading-tight">
+                Hackathon Innovation Santé Digitale
+              </div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Faculté de Médecine & Pharmacie, Fès</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">
+                Hackathon 48h: Algorithmes & Diagnostic Précoce
+              </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                Concours interdisciplinaire jumelant internes en médecine et développeurs d'IA avec un prix d'amorçage de 100 000 MAD.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-[#F58200] font-semibold">Dotation 100K MAD</span>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary" href="#">
+<span>Postuler</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Action Button Centered -->
+<div class="flex justify-center">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-all shadow-sm" href="#">
+<span>Voir tous les événements de l'année</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 5: LATEST NEWS AND ANNOUNCEMENTS -->
+<section class="w-full py-20 bg-surface-container-low" id="actualites">
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface text-primary font-label-sm text-label-sm uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">feed</span>
+<span>Publications & Communiqués</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Actualités de l'association
+          </h2>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-secondary mt-3 md:mt-0" href="#">
+<span>Accéder aux archives de presse</span>
+<span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</a>
+</div>
+<!-- Editorial Layout: 1 Major Featured Article + 3 Side Briefs -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Major Featured Article -->
+<article class="lg:col-span-7 rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col justify-between group">
+<div>
+<div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Official signing ceremony in an elegant Moroccan academic conference hall between university chancellors and MSRASI board members with flags and document folders in rich navy and gold lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCegixn3fHL2hV-MoUFlUyOnaKjcj8TNGr7wAMAKA2gwWJgGMXaCg9HDkEm27JzftLBUGMm8JEDEPRnNeM9LMSKqhLXE2RMpteFpOEp36kJoBgDzpwTnUtpkOOiLr0Jzr4oLHgNbjXGPExzGzQZ1ztd0rOOlKXhTUb0HRcmVnT7xvgiXQlDlLyy0zMwNW4tXABlHXVYVfeu5PvbfI_aZLdAhxzTOrkBLOKYZIqu9ho"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-white font-label-sm text-label-sm">
+                Partenariat Stratégique
+              </div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-3 text-on-surface-variant font-code-citation text-code-citation mb-3">
+<span>Rabat</span>
+<span>•</span>
+<span>Publié le 18 Juin 2025</span>
+<span>•</span>
+<span>Par le Secrétariat Général</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 group-hover:text-primary transition-colors">
+                Accord-cadre historique signé avec l'Académie Hassan II des Sciences et Techniques pour financer 20 thèses d'excellence
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+                Le partenariat mobilise une enveloppe pluriannuelle destinée aux équipements de pointe et à la mobilité internationale des doctorants marocains spécialisés dans la modélisation hydrologique et l'agritech.
+              </p>
+</div>
+</div>
+<div class="px-8 pb-8 pt-0 flex items-center justify-between">
+<span class="font-code-citation text-code-citation text-on-surface-variant">Temps de lecture : 4 min</span>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-bold" href="#">
+<span>Lire le communiqué complet</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- 3 Side Briefs -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<!-- Side Brief 1 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2.5 py-0.5 rounded bg-[#FFF4E5] text-[#F58200] font-label-sm text-label-sm font-semibold">Appel à Communication</span>
+<span class="font-code-citation text-code-citation text-on-surface-variant">10 Juin 2025</span>
+</div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface mb-2 hover:text-primary transition-colors">
+<a href="#">Appel à papiers : Numéro Spécial de la Revue Marocaine des Sciences Appliquées</a>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Indexation Scopus confirmée pour le volume d'hiver 2025 dédié à la résilience des infrastructures côtières face au changement climatique.
+              </p>
+</div>
+<div class="pt-3 flex items-center justify-between text-xs text-primary font-semibold">
+<span>Date limite : 15 Septembre</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</article>
+<!-- Side Brief 2 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2.5 py-0.5 rounded bg-[#E6F5EE] text-[#087a4b] font-label-sm text-label-sm font-semibold">Bourses & Mérite</span>
+<span class="font-code-citation text-code-citation text-on-surface-variant">02 Juin 2025</span>
+</div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface mb-2 hover:text-primary transition-colors">
+<a href="#">Lancement du programme « L'Excellence au Féminin dans les STEM »</a>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Cinq bourses post-doctorales de 150 000 MAD attribuées à de jeunes chercheuses marocaines travaillant en intelligence artificielle et bio-ingénierie.
+              </p>
+</div>
+<div class="pt-3 flex items-center justify-between text-xs text-primary font-semibold">
+<span>Candidatures ouvertes</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</article>
+<!-- Side Brief 3 -->
+<article class="p-6 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="px-2.5 py-0.5 rounded bg-[#EAF2FC] text-primary font-label-sm text-label-sm font-semibold">Vie Associative</span>
+<span class="font-code-citation text-code-citation text-on-surface-variant">27 Mai 2025</span>
+</div>
+<h4 class="font-headline-xs text-headline-xs text-on-surface mb-2 hover:text-primary transition-colors">
+<a href="#">Assemblée Générale Ordinaire 2025 : Publication du rapport d'activité annuel</a>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                Téléchargez le bilan moral et financier validé par le commissaire aux comptes ainsi que la feuille de route opérationnelle 2026.
+              </p>
+</div>
+<div class="pt-3 flex items-center justify-between text-xs text-primary font-semibold">
+<span>Télécharger le PDF (2.4 MB)</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: INSTITUTIONAL PARTNERS & COLLABORATIONS -->
+<section class="w-full py-16 bg-surface">
+<div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest font-bold">Écosystème Partenaire</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1">
+          Ils soutiennent et collaborent avec la MSRASI
+        </h3>
+</div>
+<!-- Monochrome / subtle hover grid of academic and state partners -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+<div class="h-24 rounded-xl bg-surface-container-low p-4 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-tight">UM6P</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Université Mohammed VI Polytechnique</span>
+</div>
+<div class="h-24 rounded-xl bg-surface-container-low p-4 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-tight">CNRST</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Centre National pour la Recherche</span>
+</div>
+<div class="h-24 rounded-xl bg-surface-container-low p-4 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-tight">UM5 Rabat</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Université Mohammed V</span>
+</div>
+<div class="h-24 rounded-xl bg-surface-container-low p-4 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-tight">MAScIR</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Moroccan Foundation for Advanced Science</span>
+</div>
+<div class="h-24 rounded-xl bg-surface-container-low p-4 flex flex-col items-center justify-center text-center group hover:bg-surface-container transition-colors col-span-2 sm:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant group-hover:text-primary transition-colors tracking-tight">FSR</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Faculté des Sciences de Rabat</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: COMMUNITY & NEWSLETTER CALL TO ACTION -->
+<section class="w-full py-16 bg-gradient-to-r from-[#10243B] via-[#1646A8] to-[#10243B] text-white relative overflow-hidden">
+<!-- Subtle node graphic ornament -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 1200 400">
+<path d="M0 200 C300 100, 600 300, 1200 200" stroke="white" stroke-width="2"></path>
+<path d="M0 100 C400 300, 800 50, 1200 250" stroke="white" stroke-dasharray="6 6" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="relative w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-3xl mx-auto text-center flex flex-col items-center space-y-6">
+<div class="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[32px]">mark_email_unread</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-white tracking-tight">
+          Restons connectés à l'innovation scientifique marocaine
+        </h2>
+<p class="font-body-md text-body-md text-slate-200 max-w-xl">
+          Recevez mensuellement les appels à communication, les synthèses de nos congrès, les invitations aux workshops et les offres de bourses de recherche.
+        </p>
+<!-- Newsletter Subscription Form -->
+<form class="w-full max-w-xl flex flex-col sm:flex-row items-center gap-3 pt-2" onsubmit="event.preventDefault(); alert('Merci pour votre inscription à la lettre d\'information MSRASI.');">
+<div class="relative w-full">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-[20px] text-slate-400">mail</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-xl bg-white text-on-surface placeholder-slate-400 font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Votre adresse courriel académique ou professionnelle" required="" type="email"/>
+</div>
+<button class="w-full sm:w-auto shrink-0 h-12 px-8 rounded-xl bg-[#F58200] hover:bg-[#ff9924] text-white font-label-md text-label-md font-bold transition-all shadow-lg flex items-center justify-center gap-2" type="submit">
+<span>S'abonner</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+<p class="font-code-citation text-code-citation text-slate-400">
+          En vous inscrivant, vous acceptez notre politique de protection des données scientifiques. Désabonnement à tout moment.
+        </p>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface"><div class="w-full max-w-[1360px] mx-auto px-gutter-mobile lg:px-gutter-desktop pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter mb-space-xl"><div class="lg:col-span-2 space-y-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-tertiary-fixed text-[28px]">star</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-white">MSRASI</span><span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Royaume du Maroc</span></div></div><p class="font-body-sm text-body-sm text-outline-variant pr-space-lg">Association Marocaine pour la Recherche en Sciences Appliquées et l'Innovation. Fédérer les chercheurs, valoriser le capital scientifique national et catalyser l'innovation technologique à impact socio-économique.</p><div class="flex items-center gap-space-sm"><span class="px-space-sm py-1 rounded bg-surface-container/10 font-label-sm text-label-sm text-tertiary-fixed">Édition Académique</span><span class="px-space-sm py-1 rounded bg-surface-container/10 font-label-sm text-label-sm text-secondary-fixed">Pôles Régionaux</span></div></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Navigation</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li data-path="accueil"><a class="text-outline-variant hover:text-white transition-colors" data-path="accueil" href="#">Accueil</a></li><li data-path="a-propos"><a class="text-outline-variant hover:text-white transition-colors" data-path="a-propos" href="#">Mission & Conseil Scientifique</a></li><li data-path="nos-activites"><a class="text-outline-variant hover:text-white transition-colors" data-path="nos-activites" href="#">Programmes de Recherche</a></li><li data-path="evenements"><a class="text-outline-variant hover:text-white transition-colors" data-path="evenements" href="#">Symposiums & Congrès</a></li><li data-path="actualites"><a class="text-outline-variant hover:text-white transition-colors" data-path="actualites" href="#">Publications & Revues</a></li></ul></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Pôles d'Excellence</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-outline-variant"><li>Intelligence Artificielle & Data</li><li>Énergies Renouvelables & Eau</li><li>Biotechnologies Médicales</li><li>Génie des Matériaux Avancés</li><li>Économie Circulaire & Climat</li></ul></div><div class="space-y-space-sm"><h4 class="font-headline-xs text-headline-xs text-white">Contact & Siège</h4><div class="space-y-space-xs font-body-sm text-body-sm text-outline-variant"><p class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed mt-1">location_on</span><span>Campus Universitaire Al Irfane, Rabat & Casablanca Technopark, Maroc</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">mail</span><span>secretariat@msrasi.ma</span></p><p class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">call</span><span>+212 (0) 537 00 00 00</span></p></div><div class="pt-space-sm"><a class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary-fixed-dim hover:text-white transition-colors" data-path="portail-administration" href="#"><span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>Portail d'Administration</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-label-sm font-label-sm text-outline"><p>© 2025 MSRASI - Association Marocaine pour la Recherche en Sciences Appliquées et l'Innovation. Tous droits réservés.</p><div class="flex items-center gap-space-md"><a class="hover:text-white transition-colors" href="#">Mentions légales</a><a class="hover:text-white transition-colors" href="#">Politique scientifique & Éthique</a><a class="hover:text-white transition-colors" href="#">Charte de publication</a></div></div></div></footer></body></html>

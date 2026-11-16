@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#0d1c30","on-error":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#233145","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004492","primary-fixed":"#dbe1ff","surface-container-low":"#f0f3ff","primary-container":"#1646a8","tertiary":"#572a00","error":"#ba1a1a","on-tertiary-fixed-variant":"#6f3800","surface-bright":"#f9f9ff","surface-container-high":"#dee9ff","surface":"#f9f9ff","on-error-container":"#93000a","on-surface-variant":"#434652","outline":"#747684","outline-variant":"#c4c6d4","surface-variant":"#d5e3fe","primary":"#003082","on-secondary-container":"#003371","on-primary-fixed":"#00184a","on-secondary":"#ffffff","primary-fixed-dim":"#b3c5ff","surface-container":"#e7eeff","secondary":"#115cba","on-background":"#0d1c30","surface-tint":"#2f59bb","surface-container-highest":"#d5e3fe","secondary-container":"#659dff","on-primary-container":"#a7bcff","on-tertiary-fixed":"#2f1400","on-secondary-fixed":"#001a40","tertiary-fixed":"#ffdcc4","on-tertiary-container":"#ffab6a","tertiary-container":"#793d00","background":"#f9f9ff","error-container":"#ffdad6","surface-dim":"#ccdbf5","secondary-fixed-dim":"#acc7ff","inverse-on-surface":"#ebf1ff","inverse-primary":"#b3c5ff","tertiary-fixed-dim":"#ffb781","on-primary-fixed-variant":"#083fa2","secondary-fixed":"#d7e2ff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-desktop":"3rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-lg":["Manrope"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-xs":["Manrope"],"code-citation":["Inter"],"body-lg":["Inter"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-xl-mobile":["Manrope"],"label-md":["Inter"],"headline-lg-mobile":["Manrope"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xs":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-citation":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between p-space-md"><div class="space-y-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="MSRASI Official Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><div class="flex flex-col"><span class="font-headline-xs text-headline-xs font-bold text-white">Portail Scientifique</span><span class="font-label-sm text-label-sm text-tertiary-fixed">Console Administrative</span></div></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="espace-membre" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Vue Globale</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-publications" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Publications & Actes</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-adherents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Membres & Laboratoires</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-evenements" href="#"><span class="material-symbols-outlined text-[20px]">event</span>Colloques & Jury</a></nav></div><div class="p-space-sm rounded bg-surface-container/10 space-y-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm text-white font-medium leading-none">Dr. Responsable</span><span class="font-label-sm text-label-sm text-outline-variant">Comité Scientifique</span></div></div><a class="inline-flex items-center gap-space-xs text-label-sm text-tertiary-fixed hover:text-white pt-space-xs transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[14px]">arrow_back</span>Retour au portail public</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="MSRASI Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><span class="font-headline-xs text-headline-xs text-primary">MSRASI Administration</span></div><div class="flex items-center gap-space-md"><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Serveur Académique — En Ligne</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Breadcrumbs & Document Protocol Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-outline font-label-md text-label-md">
+<span>Administration</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Événements</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Nouveau Modèle d'Événement</span>
+</div>
+<div class="flex items-baseline gap-space-md mt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Création d'Événement Scientifique</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-code-citation text-code-citation font-semibold">MODÈLE PROTOCOLAIRE v2.4</span>
+</div>
+</div>
+<!-- Realtime Preview Trigger Button -->
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-sm px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm hover:shadow-md transition-all font-label-md text-label-md" onclick="togglePreviewModal(true)" type="button">
+<span class="material-symbols-outlined text-secondary text-[18px]">visibility</span>
+<span>Aperçu temps réel de la page publique</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-sm py-2.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Préréglages MSRASI</span>
+</button>
+</div>
+</div>
+<!-- Step 0: Layout Archetype Selector (Bento Card Style) -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-outline">Gabarit Conceptuel</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-headline-xs text-headline-xs text-on-surface font-bold">Choisissez un gabarit de mise en page prédéfini</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Règles typographiques & structure adaptatives</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md" id="template-card-grid">
+<!-- Card 1: Conférence Scientifique (Default Active) -->
+<div class="archetype-card group relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer transition-all border-l-4 border-l-primary flex flex-col justify-between" data-archetype="conf" onclick="selectArchetype(this, 'conf')">
+<div class="absolute top-3 right-3 text-primary" data-check-indicator="">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold mb-1">Conférence Scientifique</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Format académique rigoureux avec keynotes internationaux, sessions parallèles et recueil d'actes indexé DOI.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">Peer-review</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">Actes ISBN</span>
+</div>
+</div>
+<!-- Card 2: Atelier / Formation -->
+<div class="archetype-card group relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer transition-all border-l-4 border-l-transparent flex flex-col justify-between opacity-80 hover:opacity-100" data-archetype="workshop" onclick="selectArchetype(this, 'workshop')">
+<div class="absolute top-3 right-3 text-outline-variant" data-check-indicator="">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">model_training</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold mb-1">Atelier / Formation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Focus compétences pratiques, manipulation en laboratoire, validation des prérequis et jauge d'accueil restreinte.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">Capacité limitée</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">Certificat</span>
+</div>
+</div>
+<!-- Card 3: Compétition / Hackathon -->
+<div class="archetype-card group relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer transition-all border-l-4 border-l-transparent flex flex-col justify-between opacity-80 hover:opacity-100" data-archetype="hackathon" onclick="selectArchetype(this, 'hackathon')">
+<div class="absolute top-3 right-3 text-outline-variant" data-check-indicator="">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">emoji_events</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold mb-1">Compétition / Hackathon</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Format challenge technologique avec prix de l'innovation marocaine, critères du jury d'experts et formation d'équipes.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm">Prix d'Innovation</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">Sprint R&D</span>
+</div>
+</div>
+<!-- Card 4: Séminaire / Symposium -->
+<div class="archetype-card group relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md cursor-pointer transition-all border-l-4 border-l-transparent flex flex-col justify-between opacity-80 hover:opacity-100" data-archetype="symposium" onclick="selectArchetype(this, 'symposium')">
+<div class="absolute top-3 right-3 text-outline-variant" data-check-indicator="">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container mb-space-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold mb-1">Séminaire / Symposium</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Format plénier, tables rondes ministérielles, débat stratégique et synthèses des perspectives sectorielles.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-label-sm text-label-sm">Table Ronde</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">Livre Blanc</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Step Navigation Wizard (6 Structured Steps) -->
+<section class="mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-space-sm">
+<!-- Step 1: Informations Générales (Active) -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-high text-left transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+            1
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Étape 1</p>
+<p class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate">Infos Générales</p>
+</div>
+</button>
+<!-- Step 2: Médias & Affiches (Active/Visible in Form) -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-left hover:bg-surface-container transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold flex-shrink-0">
+            2
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Étape 2</p>
+<p class="font-headline-xs text-headline-xs text-on-surface font-semibold truncate">Médias & Affiches</p>
+</div>
+</button>
+<!-- Step 3: Dates & Modalités -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-transparent text-left hover:bg-surface-container-low transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm font-medium flex-shrink-0">
+            3
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Étape 3</p>
+<p class="font-headline-xs text-headline-xs text-outline-variant font-normal truncate">Dates & Lieux</p>
+</div>
+</button>
+<!-- Step 4: Programme & Intervenants -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-transparent text-left hover:bg-surface-container-low transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm font-medium flex-shrink-0">
+            4
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Étape 4</p>
+<p class="font-headline-xs text-headline-xs text-outline-variant font-normal truncate">Programme & Jury</p>
+</div>
+</button>
+<!-- Step 5: Paramètres d'Inscription -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-transparent text-left hover:bg-surface-container-low transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm font-medium flex-shrink-0">
+            5
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Étape 5</p>
+<p class="font-headline-xs text-headline-xs text-outline-variant font-normal truncate">Inscriptions & Tarifs</p>
+</div>
+</button>
+<!-- Step 6: Publication & Diffusion -->
+<button class="group flex items-center gap-space-sm p-space-sm rounded-lg bg-transparent text-left hover:bg-surface-container-low transition-all" type="button">
+<div class="w-7 h-7 rounded-full bg-surface-container text-outline flex items-center justify-center font-label-sm text-label-sm font-medium flex-shrink-0">
+            6
+          </div>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Étape 6</p>
+<p class="font-headline-xs text-headline-xs text-outline-variant font-normal truncate">Indexation & Live</p>
+</div>
+</button>
+</div>
+<!-- Step Progression Bar -->
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 33.33%;"></div>
+</div>
+</div>
+</section>
+<!-- Form Content: Steps 1 & 2 in Rich Detail -->
+<form class="space-y-space-xl pb-32" id="event-multi-step-form" onsubmit="event.preventDefault();">
+<!-- ============================================== -->
+<!-- SECTION 1: INFORMATIONS GÉNÉRALES DU PROTOCOLE -->
+<!-- ============================================== -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-lg relative">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm bg-gradient-to-r from-transparent via-surface-container-low/50 to-transparent">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary text-on-primary flex items-center justify-center font-headline-xs text-headline-xs font-bold shadow-sm">
+            1
+          </div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Informations Générales de l'Événement</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Données indexées au Répertoire Scientifique National MSRASI</p>
+</div>
+</div>
+<div class="mt-space-xs md:mt-0 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">lock</span>
+<span class="font-label-sm text-label-sm text-outline">Champs conformes au protocole OAI-PMH</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Event Title -->
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="event-title">
+<span>Titre officiel du colloque / événement <span class="text-error">*</span></span>
+<span class="text-outline font-normal text-body-sm">Recommandé : 60 à 120 caractères</span>
+</label>
+<input class="h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" id="event-title" name="event-title" placeholder="Ex: Symposium Panafricain sur les Énergies Renouvelables..." required="" type="text" value="Symposium Africain sur la Souveraineté Énergétique et les Nouvelles Technologies"/>
+</div>
+<!-- Main Category -->
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="event-category">
+            Catégorie principale <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all appearance-none cursor-pointer" id="event-category" name="event-category">
+<option selected="" value="conf">Conférence Scientifique Internationale</option>
+<option value="workshop">Atelier & Formation Certifiante</option>
+<option value="hackathon">Hackathon & Compétition R&D</option>
+<option value="symposium">Symposium Stratégique</option>
+<option value="colloque">Colloque Doctoral Inter-universitaire</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 pointer-events-none text-outline">expand_more</span>
+</div>
+</div>
+<!-- Short Description / Executive Summary -->
+<div class="lg:col-span-12 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface" for="event-summary">
+              Résumé exécutif / Pitch synthétique <span class="text-error">*</span>
+</label>
+<span class="font-code-citation text-code-citation text-outline"><span id="char-count">174</span> / 300 caractères max</span>
+</div>
+<textarea class="p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline resize-none leading-relaxed" id="event-summary" maxlength="300" name="event-summary" oninput="document.getElementById('char-count').innerText = this.value.length" placeholder="Condensé destiné aux invitations diplomatiques, aux affichages sur le portail MSRASI et aux dépêches académiques..." rows="3">Grand rendez-vous panafricain réunissant les laboratoires d'excellence, les délégations ministérielles et les pionniers de la transition hydrogène autour des enjeux de souveraineté technologique et de décarbonation industrielle.</textarea>
+</div>
+<!-- Full Scientific Description (Wysiwyg Toolbar Simulation) -->
+<div class="lg:col-span-12 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Description scientifique détaillée (Notice complète des travaux) <span class="text-error">*</span></span>
+<span class="font-code-citation text-code-citation text-secondary">Prend en charge LaTeX & balisage Markdown</span>
+</label>
+<div class="rounded-lg bg-surface-container-low overflow-hidden">
+<!-- Simulated WYSIWYG Toolbar -->
+<div class="flex flex-wrap items-center gap-1 p-space-xs bg-surface-container-high">
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Gras" type="button">
+<span class="material-symbols-outlined text-[18px]">format_bold</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Italique" type="button">
+<span class="material-symbols-outlined text-[18px]">format_italic</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Souligné" type="button">
+<span class="material-symbols-outlined text-[18px]">format_underlined</span>
+</button>
+<span class="w-[1px] h-4 bg-outline-variant mx-1"></span>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Titre 2" type="button">
+<span class="material-symbols-outlined text-[18px]">title</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Liste à puces" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Liste numérotée" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_numbered</span>
+</button>
+<span class="w-[1px] h-4 bg-outline-variant mx-1"></span>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Citation Académique" type="button">
+<span class="material-symbols-outlined text-[18px]">format_quote</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Formule Scientifique LaTeX" type="button">
+<span class="material-symbols-outlined text-[18px]">functions</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Insérer un lien DOI" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-on-surface transition-colors" title="Tableau de Données" type="button">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</button>
+<div class="ml-auto flex items-center gap-space-xs pr-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span class="font-code-citation text-code-citation text-outline">Sauvegardé 10:42</span>
+</div>
+</div>
+<!-- WYSIWYG Editor Body -->
+<div class="min-h-[160px] p-space-md font-body-md text-body-md text-on-surface leading-relaxed focus:outline-none focus:bg-surface-container-lowest transition-colors" contenteditable="true">
+<p class="font-headline-sm text-headline-sm text-primary mb-2">1. Contexte & Justification Scientifique</p>
+<p class="mb-3">
+                L’Afrique du Nord et les régions subsahariennes disposent d’un potentiel solaire et éolien exceptionnel, capable de transformer la géopolitique globale de l’énergie. Ce symposium articulera les axes prioritaires de transfert technologique, la synthèse d’électrolyseurs à haute efficacité et l’harmonisation des cadres réglementaires inter-étatiques.
+              </p>
+<p class="font-headline-sm text-headline-sm text-primary mb-2">2. Axes de Travail Principaux</p>
+<p>
+                • Intégration des réseaux haute tension intelligents (HVDC Smart Grids)<br/>
+                • Matériaux innovants pour le stockage stationnaire et hydrogène vert<br/>
+                • Valorisation économique et diplomatie scientifique continentale
+              </p>
+</div>
+</div>
+</div>
+<!-- Official Languages (Pills Selection) -->
+<div class="lg:col-span-5 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">
+            Langues officielles de l'événement
+          </label>
+<div class="flex flex-wrap items-center gap-space-xs mt-1" id="language-pill-group">
+<button class="px-space-md py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" onclick="toggleLanguage(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Français</span>
+</button>
+<button class="px-space-md py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" onclick="toggleLanguage(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Anglais</span>
+</button>
+<button class="px-space-md py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" onclick="toggleLanguage(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Arabe (العربية)</span>
+</button>
+<button class="px-space-md py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center gap-1.5" onclick="toggleLanguage(this)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Espagnol</span>
+</button>
+</div>
+</div>
+<!-- Scientific Keywords (Interactive Tags) -->
+<div class="lg:col-span-7 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Mots-clés scientifiques (Taxonomie MSRASI)</span>
+<span class="text-outline text-body-sm">Appuyez sur Entrée pour ajouter</span>
+</label>
+<div class="min-h-11 px-space-sm py-1.5 rounded-lg bg-surface-container-low flex flex-wrap items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md">
+<span>#HydrogèneVert</span>
+<button class="hover:text-error" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md">
+<span>#Nanomatériaux</span>
+<button class="hover:text-error" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md">
+<span>#SmartGrids</span>
+<button class="hover:text-error" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md">
+<span>#TransitionÉnergétique</span>
+<button class="hover:text-error" onclick="this.parentElement.remove()" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<input class="bg-transparent border-none text-body-md font-body-md text-on-surface focus:outline-none px-2 py-1 min-w-[140px] flex-1 placeholder:text-outline" onkeydown="if(event.key==='Enter'){event.preventDefault(); addTag(this);}" placeholder="+ Ajouter un descripteur..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- ============================================== -->
+<!-- SECTION 2: MÉDIAS, AFFICHES & SUPPORTS VISUELS -->
+<!-- ============================================== -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-sm bg-gradient-to-r from-transparent via-surface-container-low/50 to-transparent">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-headline-xs text-headline-xs font-bold shadow-sm">
+            2
+          </div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Médias & Supports Visuels Officiels</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conformité aux spécifications d'affichage haute résolution et formats d'impression</p>
+</div>
+</div>
+<div class="mt-space-xs md:mt-0 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-secondary">Contrôle automatique du ratio et du profil CMJN</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Zone A: Main Cover Banner 16:9 with Crop Control -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Affiche Principale / Bannière Web (16:9)</span>
+<span class="font-label-sm text-label-sm text-outline">Recommandé : 1920 × 1080 px (Max 12 Mo)</span>
+</div>
+<!-- Preview & Crop Container -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-inverse-surface group shadow-inner">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Photographie ultra haute définition d'un vaste complexe de recherche scientifique au Maroc combinant architecture bioclimatique moderne et panneaux solaires de pointe. Au centre, un chercheur observe un faisceau laser holographique sur fond d'océan Atlantique. Tons bleus souverains et reflets cuivre doré." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBI0mp2XjzMUoZAVUWzAnqgck2sez8tiDsU-PPW1OXgCoYiNMchJ5lelSiFQFeHMsf39k4cDpsrlEnSOZqZXLcikCUq1l2vLxaH8YR04B2C-7zz0owDMwQ8UZyAbIfniIa-IHabNKWmQobEdT35CAju37g0dxTzde-O7JsLU_GMVNjLXAaSnAjwmHOa_EZAJFfgIu-LbNAc14rImWUxGEX75PFQSK8qVoldIy0qG3Q')"></div>
+<!-- Dark Overlay Vignette -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/30 pointer-events-none"></div>
+<!-- Visual Floating Badge -->
+<div class="absolute top-3 left-3 flex items-center gap-space-xs bg-inverse-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-white font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Aperçu Portail — Couverture Principale</span>
+</div>
+<!-- Crop & Adjust Tool Overlay -->
+<div class="absolute bottom-3 left-3 right-3 bg-surface/90 backdrop-blur-md p-space-sm rounded-lg flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary">crop</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Cadrage Focal</span>
+</div>
+<!-- Simulated Slider -->
+<div class="flex items-center gap-space-xs flex-1 max-w-[200px]">
+<span class="material-symbols-outlined text-[14px] text-outline">zoom_out</span>
+<input class="w-full accent-primary h-1 bg-surface-container-high rounded cursor-pointer" max="150" min="100" type="range" value="105"/>
+<span class="material-symbols-outlined text-[14px] text-outline">zoom_in</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface transition-colors" title="Remplacer le média" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+</button>
+<button class="p-1.5 rounded hover:bg-error-container text-error transition-colors" title="Supprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Upload Helper Bar -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_done</span>
+<span>symposium_2025_hero_keynote.webp (4.8 Mo) — 100% optimisé</span>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline" type="button">Re-téléverser</button>
+</div>
+</div>
+<!-- Zone B: Official Scientific Poster (Vertical A4/A3) -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Poster Scientifique / Dépliant (A4/A3)</span>
+<span class="font-label-sm text-label-sm text-outline">Format PDF / TIFF (300 DPI)</span>
+</div>
+<!-- Vertical Poster Container -->
+<div class="flex gap-space-md">
+<!-- Poster Visual Box -->
+<div class="relative w-44 h-60 rounded-xl overflow-hidden bg-surface-container-high shadow-md flex-shrink-0 group">
+<div class="w-full h-full bg-cover bg-center transition-transform group-hover:scale-105" data-alt="Affiche scientifique éditoriale minimaliste au format portrait, présentant des infographies précises sur les flux d'énergie renouvelable, des typographies soignées en français et arabe, des sceaux officiels du Maroc et des diagrammes de physique quantique. Fond bleu marine profond et touches de vert émeraude." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApH2cfxwt4VEP_pR1mnDWJqkYhZFx5RvrWvl-xLeuUYIvCASGjGURMdxyH8Xp4XcyobqRc5gu0tKVTmMM7M1_J_J0WYYauuK5QOWtbtIlMSGNzUj-W30cOBP9oFjDXz791rZ4E9S17F1ApqEZnqOiWy5cOWtW9SqkPZDcLQmbhOtKshObBnk3PjlBkIOlO_dpU7pN2mtYWR1qlBbn8ItCfntkZan8Dsawz-DyHrfo')"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="px-3 py-1.5 rounded-lg bg-white/90 text-primary font-label-sm text-label-sm shadow-md font-semibold" type="button">
+                  Agrandir
+                </button>
+</div>
+</div>
+<!-- Poster Metadata & Actions -->
+<div class="flex flex-col justify-between py-1 flex-1">
+<div class="space-y-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm inline-block">Validé MSRASI Print</span>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">Poster_A3_Officiel_Souverainete.pdf</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prêt pour tirage institutionnel et panneaux du campus.</p>
+<div class="font-code-citation text-code-citation text-outline space-y-0.5 pt-1">
+<p>Dimensions : 3508 × 4960 px</p>
+<p>Espace : CMJN Coated FOGRA39</p>
+<p>Poids : 18.4 Mo</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Consulter PDF</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Zone C: Photo Gallery & Annex Documents Dropzone -->
+<div class="lg:col-span-12 flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Galerie Photos & Documents Annexes</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comptes-rendus préparatoires, conventions de sponsoring et logotypes des partenaires</p>
+</div>
+<span class="font-code-citation text-code-citation text-outline">3 fichiers téléversés</span>
+</div>
+<!-- Drag & Drop Zone -->
+<div class="border-none rounded-xl bg-surface-container-low p-space-lg flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container transition-all">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary mb-space-xs group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">Glissez-déposez vos fichiers ici, ou <span class="text-primary hover:underline">parcourez vos dossiers</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Accepte PNG, JPG, PDF, DOCX jusqu'à 25 Mo par fichier</p>
+</div>
+<!-- Uploaded Files Strip -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm mt-space-xs">
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[24px] text-primary">description</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md truncate font-semibold">Protocole_Partenariat_MASEN.pdf</p>
+<p class="font-code-citation text-code-citation text-outline">1.2 Mo • Validé</p>
+</div>
+<button class="text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[24px] text-secondary">image</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md truncate font-semibold">Amphitheatre_Principal_Rabat.jpg</p>
+<p class="font-code-citation text-code-citation text-outline">3.8 Mo • Prêt</p>
+</div>
+<button class="text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-[24px] text-tertiary">folder_zip</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md truncate font-semibold">Logos_Laboratoires_UM6P_CNRST.zip</p>
+<p class="font-code-citation text-code-citation text-outline">8.5 Mo • En archive</p>
+</div>
+<button class="text-outline hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Steps Overview Teaser -->
+<section class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+<div>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">Prochaine étape : Dates, Lieux & Modalités Hybrides</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configuration des créneaux horaires, géolocalisation du campus et liens de diffusion streaming sécurisés.</p>
+</div>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary hover:bg-secondary transition-all font-label-md text-label-md whitespace-nowrap shadow-sm" onclick="advanceStep()" type="button">
+<span>Continuer vers l'Étape 3</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</section>
+</form>
+<!-- ============================================== -->
+<!-- PERSISTENT STICKY BOTTOM ACTION BAR -->
+<!-- ============================================== -->
+<div class="fixed bottom-0 left-72 right-0 bg-surface/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.06)] px-gutter py-space-sm z-30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">save</span>
+<span>Enregistrer comme brouillon</span>
+</button>
+<span class="hidden sm:inline text-outline-variant font-code-citation text-code-citation">
+        Dernière auto-sauvegarde à 10:48:12
+      </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-outline cursor-not-allowed font-label-md text-label-md" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Étape précédente</span>
+</button>
+<button class="hidden md:inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-secondary hover:bg-surface-container font-label-md text-label-md transition-all shadow-sm" onclick="togglePreviewModal(true)" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Aperçu en direct</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-secondary transition-all font-label-md text-label-md shadow-md" onclick="advanceStep()" type="button">
+<span>Étape suivante : Dates & Modalités</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ============================================== -->
+<!-- REALTIME MODAL PREVIEW DRAWER (LIVE TEST VIEW) -->
+<!-- ============================================== -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-space-md" id="preview-modal">
+<div class="bg-surface rounded-2xl w-full max-w-4xl max-h-[921px] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+<!-- Modal Header -->
+<div class="p-space-md bg-inverse-surface text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[24px]">visibility</span>
+<div>
+<h3 class="font-headline-xs text-headline-xs text-white font-bold">Simulation de Rendu : Page Publique</h3>
+<p class="font-label-sm text-label-sm text-tertiary-fixed">Portail MSRASI — Vue Visiteur & Chercheur</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" onclick="togglePreviewModal(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Simulated Event Page Preview Content -->
+<div class="overflow-y-auto p-space-lg space-y-space-md bg-background">
+<!-- Event Hero Preview -->
+<div class="relative rounded-xl overflow-hidden aspect-[21/9] bg-inverse-surface shadow-md">
+<div class="w-full h-full bg-cover bg-center" data-alt="Photographie ultra haute définition d'un vaste complexe de recherche scientifique au Maroc combinant architecture bioclimatique moderne et panneaux solaires de pointe. Au centre, un chercheur observe un faisceau laser holographique sur fond d'océan Atlantique. Tons bleus souverains et reflets cuivre doré." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1nIfE0wspNepYMa77tQS7cb-85do5kmOBR1-97Bw8FP1sYCBB68f1c0wlYdx5zmKSmyxokBcrgtxSj6bZNNI8XKiYSZkY0t2dE_01euA07_eJR7NiMjmQzQVGJVg5QtvLaxv_w7_l4LjSlvGx0qsyeTH9_916CuWee4mmCyAwngoqF80blEGkHXlmlvXeGqeW7BLt2MMgZZdTb5OBXoR2TJWiAOhYyHiSHghUBmc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent flex flex-col justify-end p-space-lg text-white">
+<div class="flex items-center gap-space-xs mb-2">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm uppercase font-bold tracking-wider">Conférence Internationale</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white font-label-sm text-label-sm">Rabat & En ligne</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold leading-tight max-w-2xl" id="modal-preview-title">
+              Symposium Africain sur la Souveraineté Énergétique et les Nouvelles Technologies
+            </h2>
+</div>
+</div>
+<!-- Meta Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Date estimée</span>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">14 - 17 Mai 2025</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Lieu</span>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">Campus CNRST, Rabat</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Langues</span>
+<p class="font-headline-xs text-headline-xs text-on-surface font-bold">FR, EN, AR</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="font-label-sm text-label-sm text-outline">Indexation</span>
+<p class="font-headline-xs text-headline-xs text-secondary font-bold">Actes Scopus & DOI</p>
+</div>
+</div>
+<!-- Description Sample -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">Présentation du Programme</h4>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Grand rendez-vous panafricain réunissant les laboratoires d'excellence, les délégations ministérielles et les pionniers de la transition hydrogène autour des enjeux de souveraineté technologique et de décarbonation industrielle.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">#HydrogèneVert</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">#Nanomatériaux</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">#SmartGrids</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-sm bg-surface-container flex items-center justify-between">
+<span class="font-code-citation text-code-citation text-on-surface-variant">Affichage simulé sur viewport Desktop 1280px</span>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md" onclick="togglePreviewModal(false)" type="button">
+          Fermer la prévisualisation
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Logic -->
+<script>
+    function selectArchetype(element, archetypeKey) {
+      const allCards = document.querySelectorAll('.archetype-card');
+      allCards.forEach(card => {
+        card.classList.remove('border-l-primary', 'shadow-md');
+        card.classList.add('border-l-transparent', 'opacity-80');
+        const indicator = card.querySelector('[data-check-indicator]');
+        if (indicator) {
+          indicator.innerHTML = '<span class="material-symbols-outlined text-[20px] text-outline-variant">radio_button_unchecked</span>';
+        }
+      });
+
+      element.classList.add('border-l-primary', 'shadow-md');
+      element.classList.remove('border-l-transparent', 'opacity-80');
+      const activeIndicator = element.querySelector('[data-check-indicator]');
+      if (activeIndicator) {
+        activeIndicator.innerHTML = '<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: \'FILL\' 1;">check_circle</span>';
+      }
+
+      // Synchronize category dropdown
+      const categorySelect = document.getElementById('event-category');
+      if (categorySelect) {
+        categorySelect.value = archetypeKey;
+      }
+    }
+
+    function toggleLanguage(btn) {
+      const isSelected = btn.classList.contains('bg-primary');
+      if (isSelected) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('bg-surface-container-high', 'text-on-surface');
+        btn.querySelector('.material-symbols-outlined').textContent = 'add';
+      } else {
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+        btn.querySelector('.material-symbols-outlined').textContent = 'check';
+      }
+    }
+
+    function addTag(input) {
+      const val = input.value.trim();
+      if (!val) return;
+      const tagText = val.startsWith('#') ? val : '#' + val;
+      
+      const tag = document.createElement('span');
+      tag.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md';
+      tag.innerHTML = `<span>${tagText}</span><button type="button" onclick="this.parentElement.remove()" class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>`;
+      
+      input.parentNode.insertBefore(tag, input);
+      input.value = '';
+    }
+
+    function togglePreviewModal(show) {
+      const modal = document.getElementById('preview-modal');
+      const titleInput = document.getElementById('event-title');
+      const previewTitle = document.getElementById('modal-preview-title');
+      
+      if (titleInput && previewTitle) {
+        previewTitle.textContent = titleInput.value || 'Événement Scientifique sans titre';
+      }
+
+      if (show) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function advanceStep() {
+      // Visual feedback for multi-step navigation
+      alert("Validation des Étapes 1 & 2 réussie. Transition vers le module 'Dates & Lieux Hybrides'...");
+    }
+  </script>
+</div></main></div></body></html>

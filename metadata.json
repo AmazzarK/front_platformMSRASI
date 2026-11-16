@@ -1,0 +1,6 @@
+{
+  "name": "MSRASI — Portail Scientifique & Administration",
+  "description": "Portail officiel de l'Association Marocaine pour la Recherche en Sciences Appliquées et l'Innovation : agenda des congrès, inscriptions académiques, actualités et console administrative.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

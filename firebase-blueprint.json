@@ -1,0 +1,160 @@
+{
+  "entities": {
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized MSRASI executive board member or scientific administrator.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "displayName": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "role": { "type": "string", "enum": ["admin", "scientific_committee"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "displayName", "role", "createdAt"]
+    },
+    "ScientificEvent": {
+      "title": "ScientificEvent",
+      "description": "Scientific conference, symposium, workshop, doctoral training, or hackathon organized by MSRASI.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "code": { "type": "string", "minLength": 2, "maxLength": 40 },
+        "title": { "type": "string", "minLength": 3, "maxLength": 220 },
+        "shortSummary": { "type": "string", "maxLength": 400 },
+        "description": { "type": "string", "maxLength": 8000 },
+        "archetype": { "type": "string", "enum": ["conf", "workshop", "hackathon", "symposium"] },
+        "category": { "type": "string", "maxLength": 80 },
+        "discipline": { "type": "string", "maxLength": 80 },
+        "format": { "type": "string", "enum": ["presentiel", "virtuel", "hybride"] },
+        "dateLabel": { "type": "string", "maxLength": 80 },
+        "startDate": { "type": "string", "maxLength": 30 },
+        "location": { "type": "string", "maxLength": 160 },
+        "city": { "type": "string", "maxLength": 80 },
+        "capacity": { "type": "integer" },
+        "registeredCount": { "type": "integer" },
+        "status": { "type": "string", "enum": ["publie", "brouillon", "en_attente", "cloture", "archive"] },
+        "featured": { "type": "boolean" },
+        "imageUrl": { "type": "string", "maxLength": 1000 },
+        "doi": { "type": "string", "maxLength": 120 },
+        "languages": { "type": "array" },
+        "tags": { "type": "array" },
+        "createdBy": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "code", "title", "archetype", "category", "format", "dateLabel", "location", "capacity", "registeredCount", "status", "featured", "createdBy", "createdAt", "updatedAt"]
+    },
+    "EventRegistration": {
+      "title": "EventRegistration",
+      "description": "Participant registration record for a scientific event.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "refCode": { "type": "string", "minLength": 4, "maxLength": 40 },
+        "eventId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "eventTitle": { "type": "string", "maxLength": 220 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "fullName": { "type": "string", "minLength": 2, "maxLength": 140 },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "phone": { "type": "string", "minLength": 5, "maxLength": 40 },
+        "city": { "type": "string", "maxLength": 80 },
+        "country": { "type": "string", "maxLength": 80 },
+        "institution": { "type": "string", "minLength": 2, "maxLength": 180 },
+        "laboratory": { "type": "string", "maxLength": 180 },
+        "academicStatus": { "type": "string", "maxLength": 60 },
+        "modality": { "type": "string", "enum": ["onsite", "online"] },
+        "participationRole": { "type": "string", "enum": ["auditeur", "auteur_oral", "auteur_poster"] },
+        "paperTitle": { "type": "string", "maxLength": 300 },
+        "track": { "type": "string", "maxLength": 120 },
+        "submissionCode": { "type": "string", "maxLength": 60 },
+        "tariffLabel": { "type": "string", "maxLength": 80 },
+        "dietaryPreference": { "type": "string", "maxLength": 100 },
+        "certificateType": { "type": "string", "maxLength": 120 },
+        "consentCNDP": { "type": "boolean" },
+        "consentMedia": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["valide", "en_attente", "annule"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "refCode", "eventId", "eventTitle", "fullName", "email", "phone", "institution", "academicStatus", "modality", "participationRole", "consentCNDP", "status", "createdAt"]
+    },
+    "NewsArticle": {
+      "title": "NewsArticle",
+      "description": "Scientific news, official announcement, partnership communiqué, or post-event recap article.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 3, "maxLength": 240 },
+        "summary": { "type": "string", "maxLength": 600 },
+        "content": { "type": "string", "maxLength": 12000 },
+        "author": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "department": { "type": "string", "maxLength": 120 },
+        "category": { "type": "string", "enum": ["Annonces officielles", "Résultats de recherche", "Retours sur événements", "Partenariats"] },
+        "publishedLabel": { "type": "string", "maxLength": 60 },
+        "views": { "type": "integer" },
+        "sharesLabel": { "type": "string", "maxLength": 80 },
+        "linkedEventCode": { "type": "string", "maxLength": 60 },
+        "status": { "type": "string", "enum": ["publie", "brouillon", "en_revue", "archive"] },
+        "featured": { "type": "boolean" },
+        "imageUrl": { "type": "string", "maxLength": 1000 },
+        "createdBy": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "summary", "author", "category", "publishedLabel", "views", "status", "featured", "createdBy", "createdAt", "updatedAt"]
+    },
+    "NewsletterSubscriber": {
+      "title": "NewsletterSubscriber",
+      "description": "Institutional subscriber for MSRASI calls for papers and event alerts.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "format": "email", "maxLength": 150 },
+        "immediateCfpAlerts": { "type": "boolean" },
+        "source": { "type": "string", "maxLength": 60 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "email", "immediateCfpAlerts", "createdAt"]
+    },
+    "ActivityLog": {
+      "title": "ActivityLog",
+      "description": "Audit trail entry for administrative actions and registrations.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "type": { "type": "string", "enum": ["registration", "article", "event", "export"] },
+        "message": { "type": "string", "minLength": 3, "maxLength": 280 },
+        "detail": { "type": "string", "maxLength": 180 },
+        "actorUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "type", "message", "actorUid", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/admins/{uid}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Authorized MSRASI administrator records."
+    },
+    "/events/{eventId}": {
+      "schema": { "$ref": "#/entities/ScientificEvent" },
+      "description": "Scientific conferences, workshops, symposiums, and hackathons."
+    },
+    "/registrations/{registrationId}": {
+      "schema": { "$ref": "#/entities/EventRegistration" },
+      "description": "Participant event registrations containing PII."
+    },
+    "/articles/{articleId}": {
+      "schema": { "$ref": "#/entities/NewsArticle" },
+      "description": "Scientific news, communiqués, and converted post-event reports."
+    },
+    "/newsletter_subscribers/{subscriberId}": {
+      "schema": { "$ref": "#/entities/NewsletterSubscriber" },
+      "description": "Newsletter and event alert subscribers containing email PII."
+    },
+    "/activity_logs/{logId}": {
+      "schema": { "$ref": "#/entities/ActivityLog" },
+      "description": "Administrative operational audit feed."
+    }
+  }
+}

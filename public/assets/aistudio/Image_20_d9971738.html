@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#0d1c30","on-error":"#ffffff","surface-container-lowest":"#ffffff","inverse-surface":"#233145","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004492","primary-fixed":"#dbe1ff","surface-container-low":"#f0f3ff","primary-container":"#1646a8","tertiary":"#572a00","error":"#ba1a1a","on-tertiary-fixed-variant":"#6f3800","surface-bright":"#f9f9ff","surface-container-high":"#dee9ff","surface":"#f9f9ff","on-error-container":"#93000a","on-surface-variant":"#434652","outline":"#747684","outline-variant":"#c4c6d4","surface-variant":"#d5e3fe","primary":"#003082","on-secondary-container":"#003371","on-primary-fixed":"#00184a","on-secondary":"#ffffff","primary-fixed-dim":"#b3c5ff","surface-container":"#e7eeff","secondary":"#115cba","on-background":"#0d1c30","surface-tint":"#2f59bb","surface-container-highest":"#d5e3fe","secondary-container":"#659dff","on-primary-container":"#a7bcff","on-tertiary-fixed":"#2f1400","on-secondary-fixed":"#001a40","tertiary-fixed":"#ffdcc4","on-tertiary-container":"#ffab6a","tertiary-container":"#793d00","background":"#f9f9ff","error-container":"#ffdad6","surface-dim":"#ccdbf5","secondary-fixed-dim":"#acc7ff","inverse-on-surface":"#ebf1ff","inverse-primary":"#b3c5ff","tertiary-fixed-dim":"#ffb781","on-primary-fixed-variant":"#083fa2","secondary-fixed":"#d7e2ff","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin-desktop":"3rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-lg":["Manrope"],"display-hero":["Manrope"],"display-hero-mobile":["Manrope"],"headline-xs":["Manrope"],"code-citation":["Inter"],"body-lg":["Inter"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-xl-mobile":["Manrope"],"label-md":["Inter"],"headline-lg-mobile":["Manrope"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xs":["16px",{"lineHeight":"24px","fontWeight":"600"}],"code-citation":["12px",{"lineHeight":"18px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between p-space-md"><div class="space-y-space-lg"><div class="flex items-center gap-space-sm px-space-xs"><img alt="MSRASI Official Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><div class="flex flex-col"><span class="font-headline-xs text-headline-xs font-bold text-white">Portail Scientifique</span><span class="font-label-sm text-label-sm text-tertiary-fixed">Console Administrative</span></div></div><nav class="space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="espace-membre" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span>Vue Globale</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-publications" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span>Publications & Actes</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-adherents" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Membres & Laboratoires</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded text-outline-variant hover:bg-surface-container/10 hover:text-white transition-colors" data-path="gestion-evenements" href="#"><span class="material-symbols-outlined text-[20px]">event</span>Colloques & Jury</a></nav></div><div class="p-space-sm rounded bg-surface-container/10 space-y-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm text-white font-medium leading-none">Dr. Responsable</span><span class="font-label-sm text-label-sm text-outline-variant">Comité Scientifique</span></div></div><a class="inline-flex items-center gap-space-xs text-label-sm text-tertiary-fixed hover:text-white pt-space-xs transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[14px]">arrow_back</span>Retour au portail public</a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="MSRASI Official Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBu1xvqA4Tar-Ep-RKqjuP8rpZUbJLslUKsUjWN7mz46UPvRhNqqUBoEiR535mnGigBH1VmV4J09J7MV_p6Bsj_Icq1ydV-koOXWHS2EXkAp9HHI9Tz9_q25WwSmL1orHd9MNkxb1G3ieL1_WZ8Ho9QFmJv1fnPcZlKUXTyiOloffFCfcTdgoFS8ON1FVPkGnvLmGgxn-4Yghs1TMondbJyQuzHNATLXG-BfSl8zkIk"/><span class="font-headline-xs text-headline-xs text-primary">MSRASI Administration</span></div><div class="flex items-center gap-space-md"><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Serveur Académique — En Ligne</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Live Academic Signal -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span class="text-on-surface-variant hover:text-primary cursor-pointer transition-colors">Administration</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Tableau de Bord</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm px-space-sm py-1 bg-surface-container rounded-full">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-citation text-code-citation text-on-surface-variant">Synchro CNRS-CNRST: Active (0.14s)</span>
+</div>
+</div>
+<!-- Operational Greeting & Command Header -->
+<div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface p-space-lg lg:p-space-xl shadow-md mt-space-xs">
+<!-- Subtle Moroccan/Scientific Node-Link Ambient Canvas -->
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 bottom-0 w-48 h-48 rounded-full bg-tertiary-container/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container/20 text-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+          Secrétariat Général & Conseil Scientifique
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-white font-extrabold tracking-tight">
+          Bonjour, Dr. Tazi
+        </h1>
+<p class="font-body-md text-body-md text-surface-dim leading-relaxed">
+          Supervision institutionnelle, monitoring en direct des colloques scientifiques et gouvernance des cohortes de recherche MSRASI.
+        </p>
+</div>
+<!-- Action Suite -->
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-tertiary-container hover:bg-tertiary text-white font-label-md text-label-md shadow-sm transition-all duration-200 transform hover:-translate-y-0.5" id="open-event-modal">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          + Créer un événement
+        </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-3 rounded-lg bg-surface-container/20 hover:bg-surface-container/30 text-white font-label-md text-label-md backdrop-blur-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+          Exporter les rapports (CSV/PDF)
+        </button>
+</div>
+</div>
+</div>
+<!-- 4 Key Metric KPI Cards (Bento Metric Strip) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md pt-space-xl">
+<!-- Card 1: Total Événements -->
+<div class="relative group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
+<div class="flex items-start justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Total Événements</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-hero text-headline-xl text-primary font-bold">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">au catalogue</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs font-code-citation text-code-citation text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-semibold">+3</span> ce trimestre académique
+      </div>
+</div>
+<!-- Card 2: Événements Actifs & Publiés -->
+<div class="relative group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex items-start justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Événements Actifs & Publiés</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-hero text-headline-xl text-on-surface font-bold">8</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">inscriptions ouvertes</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-citation text-code-citation text-on-surface-variant">
+<span>Cycle automne 2025</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-outline text-[11px] font-semibold">4 en préparation</span>
+</div>
+</div>
+<!-- Card 3: Inscriptions Enregistrées -->
+<div class="relative group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary-container"></div>
+<div class="flex items-start justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Inscriptions Enregistrées</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-hero text-headline-xl text-on-surface font-bold">1,845</span>
+<span class="font-label-sm text-label-sm text-outline">participants</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-code-citation text-code-citation">
+<span class="text-tertiary-container font-semibold">+340 cette semaine</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-bold">92% validés</span>
+</div>
+</div>
+<!-- Card 4: Articles & Actualités Publiés -->
+<div class="relative group bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-outline"></div>
+<div class="flex items-start justify-between">
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Actes & Actualités</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-hero text-headline-xl text-on-surface font-bold">32</span>
+<span class="font-label-sm text-label-sm text-outline">diffusions</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[22px]">auto_stories</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs font-code-citation text-code-citation text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">feed</span>
+        Communiqués indexés & DOI actifs
+      </div>
+</div>
+</div>
+<!-- Operational Core Grid: Two Asymmetric Columns -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-desktop pt-space-xl">
+<!-- Left Column: Operations & Active Scientific Events (8 Cols) -->
+<div class="xl:col-span-8 space-y-space-xl">
+<!-- Operations Header with Search / Filter Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">
+              Gestion Immédiate des Événements
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Surveillance des jauges, validation éditoriale et gestion des congressistes.
+            </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">
+              Session 2025/2026
+            </span>
+</div>
+</div>
+<!-- Filter Input Search -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm pt-space-xs">
+<div class="relative flex-1 min-w-[240px]">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full pl-10 pr-space-sm py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Filtrer par intitulé, discipline, ville..." type="text"/>
+</div>
+<select class="px-space-md py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface font-medium focus:outline-none">
+<option>Tous les formats</option>
+<option>Conférences</option>
+<option>Ateliers & Séminaires</option>
+<option>Symposiums</option>
+<option>Hackathons</option>
+</select>
+</div>
+<!-- Data Table Container (No borders, pure tonal rhythm) -->
+<div class="overflow-x-auto pt-space-xs">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low rounded-lg text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg">Événement & Type</th>
+<th class="py-3 px-space-sm">Calendrier</th>
+<th class="py-3 px-space-sm">Jauge / Quota</th>
+<th class="py-3 px-space-sm">Statut</th>
+<th class="py-3 px-space-md text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-2">
+<!-- Row 1: CISA 2025 -->
+<tr class="group hover:bg-surface-container-low transition-colors rounded-lg">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-10 rounded-full bg-secondary shrink-0"></div>
+<div>
+<div class="font-headline-xs text-headline-xs text-on-surface font-bold group-hover:text-primary transition-colors">
+                        CISA 2025
+                      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                        Conférence Internationale • Rabat
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="font-code-citation text-code-citation text-on-surface font-semibold">14 - 16 Oct</div>
+<div class="font-body-sm text-body-sm text-outline text-[12px]">3 Jours • Présentiel</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="space-y-1 w-32">
+<div class="flex justify-between font-code-citation text-[11px] text-on-surface-variant font-medium">
+<span>408</span>
+<span class="text-outline">/ 500</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 81%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                    À la une
+                  </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-primary hover:text-white text-primary font-label-sm text-label-sm font-semibold transition-colors">
+                      Gérer
+                    </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-secondary font-label-sm text-label-sm font-semibold transition-colors">
+                      Inscrits
+                    </button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Modifier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Atelier Robotique & IoT -->
+<tr class="group hover:bg-surface-container-low transition-colors rounded-lg">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-10 rounded-full bg-primary shrink-0"></div>
+<div>
+<div class="font-headline-xs text-headline-xs text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Atelier Robotique & IoT
+                      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        Workshop Technique • Fès
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="font-code-citation text-code-citation text-on-surface font-semibold">28 Nov</div>
+<div class="font-body-sm text-body-sm text-outline text-[12px]">Labo Recherche ENSAM</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="space-y-1 w-32">
+<div class="flex justify-between font-code-citation text-[11px] text-on-surface-variant font-medium">
+<span>45</span>
+<span class="text-outline">/ 50</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+                    Publié
+                  </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-primary hover:text-white text-primary font-label-sm text-label-sm font-semibold transition-colors">
+                      Gérer
+                    </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-secondary font-label-sm text-label-sm font-semibold transition-colors">
+                      Inscrits
+                    </button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Modifier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Symposium Hydrogène Vert -->
+<tr class="group hover:bg-surface-container-low transition-colors rounded-lg">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-10 rounded-full bg-tertiary shrink-0"></div>
+<div>
+<div class="font-headline-xs text-headline-xs text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Symposium Hydrogène Vert
+                      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                        Colloque Énergie • Ben Guerir
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="font-code-citation text-code-citation text-on-surface font-semibold">12 Déc</div>
+<div class="font-body-sm text-body-sm text-outline text-[12px]">Auditorium UM6P</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="space-y-1 w-32">
+<div class="flex justify-between font-code-citation text-[11px] text-on-surface-variant font-medium">
+<span>120</span>
+<span class="text-outline">/ 150</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-tertiary-fixed text-tertiary-container font-label-sm text-label-sm font-bold">
+                    En attente validation
+                  </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-primary hover:text-white text-primary font-label-sm text-label-sm font-semibold transition-colors">
+                      Gérer
+                    </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-secondary font-label-sm text-label-sm font-semibold transition-colors">
+                      Inscrits
+                    </button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Modifier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Hackathon DeepTech Agri -->
+<tr class="group hover:bg-surface-container-low transition-colors rounded-lg">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-10 rounded-full bg-outline shrink-0"></div>
+<div>
+<div class="font-headline-xs text-headline-xs text-on-surface font-bold group-hover:text-primary transition-colors">
+                        Hackathon DeepTech Agri
+                      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline"></span>
+                        Compétition R&D • Agadir
+                      </div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="font-code-citation text-code-citation text-on-surface font-semibold">08 Jan 2026</div>
+<div class="font-body-sm text-body-sm text-outline text-[12px]">Halle Technologique</div>
+</td>
+<td class="py-4 px-space-sm">
+<div class="space-y-1 w-32">
+<div class="flex justify-between font-code-citation text-[11px] text-on-surface-variant font-medium">
+<span>18</span>
+<span class="text-outline">/ 30 éq.</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-label-sm text-label-sm font-semibold">
+                    Brouillon
+                  </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-space-sm py-1.5 rounded bg-surface-container hover:bg-primary hover:text-white text-primary font-label-sm text-label-sm font-semibold transition-colors">
+                      Gérer
+                    </button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-secondary font-label-sm text-label-sm font-semibold transition-colors">
+                      Inscrits
+                    </button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Modifier">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Institutional Research Cluster Showcase Banner (Editorial Feature) -->
+<div class="relative bg-surface-container-low rounded-xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg overflow-hidden">
+<div class="space-y-space-xs z-10 max-w-lg">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+            Pôle d'Excellence MSRASI
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+            Campagne de Labellisation des Laboratoires 2025
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Les soumissions pour l’attribution des bourses doctorales et le rattachement aux panels de révision internationale sont ouvertes jusqu’au 30 novembre.
+          </p>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary font-bold hover:underline" href="#">
+              Consulter la charte d'évaluation
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="shrink-0 w-36 h-36 rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A modern academic laboratory with state of the art optical and electronic microscopy instrumentation, clean room ambiance with scientists in clean uniforms working under focused blue tinted laboratory light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN8S1qK4Aa-l_TaxcoBwn0VDE2UE2ZM0_BwbI6Ftvi5Vyvdh-CNkDvxxC8AxwQQji79tkuuk_vMOU11TvVv9Tsl4uyXMu8alOkJ_adaYQbVgTbanTn7ViJ4yTdJspYWGg7eqi9p8kSM6Fo8LGIivKaFLJv3z08S56eqVKmmaXhyD8Ng0SU3QnaOeCAvWMGzOmq4AooPoD-VJedDNZJVJPwRdf1mlKM8JzuAl-3rUo"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Academic Calendar & Live Activity Feed (4 Cols) -->
+<div class="xl:col-span-4 space-y-space-xl">
+<!-- Visual Mini Academic Calendar Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">Milestones Trimestriels</h3>
+</div>
+<span class="font-code-citation text-code-citation text-outline">Q4 2025 — Q1 2026</span>
+</div>
+<!-- 3-Month Visual Horizon -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Month: Octobre -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Octobre 2025</span>
+<span class="font-code-citation text-[11px] text-secondary font-semibold">1 jalon majeur</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary text-white flex flex-col items-center justify-center shrink-0">
+<span class="text-[10px] font-bold leading-none">OCT</span>
+<span class="text-headline-xs font-bold leading-none">14</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-body-sm text-body-sm text-on-surface font-bold truncate">Conférence CISA 2025</div>
+<div class="font-code-citation text-[11px] text-outline truncate">Session inaugurale • Palais des Congrès</div>
+</div>
+</div>
+</div>
+<!-- Month: Novembre -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Novembre 2025</span>
+<span class="font-code-citation text-[11px] text-secondary font-semibold">2 jalons</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary text-white flex flex-col items-center justify-center shrink-0">
+<span class="text-[10px] font-bold leading-none">NOV</span>
+<span class="text-headline-xs font-bold leading-none">28</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-body-sm text-body-sm text-on-surface font-bold truncate">Workshop Robotique & IoT</div>
+<div class="font-code-citation text-[11px] text-outline truncate">ENSAM Fès • Clôture des TP</div>
+</div>
+</div>
+</div>
+<!-- Month: Décembre -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Décembre 2025</span>
+<span class="font-code-citation text-[11px] text-tertiary-container font-semibold">Validation requise</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-tertiary-container text-white flex flex-col items-center justify-center shrink-0">
+<span class="text-[10px] font-bold leading-none">DÉC</span>
+<span class="text-headline-xs font-bold leading-none">12</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-body-sm text-body-sm text-on-surface font-bold truncate">Symposium Hydrogène Vert</div>
+<div class="font-code-citation text-[11px] text-outline truncate">Campus Ben Guerir • Partenariat MascIR</div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-2 bg-surface-container hover:bg-surface-container-high rounded text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">edit_calendar</span>
+          Synchroniser l'agenda complet
+        </button>
+</div>
+<!-- Recent Scientific Activity Feed -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+<h3 class="font-headline-xs text-headline-xs text-on-surface font-bold">Flux Opérationnel Récent</h3>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<!-- Activity Timeline -->
+<div class="relative space-y-space-md before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-surface-container">
+<!-- Event 1: Inscription Dr Mansouri -->
+<div class="relative flex items-start gap-space-md">
+<div class="relative z-10 w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[15px]">person_add</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Nouvelle inscription validée : <strong class="text-primary font-bold">Dr. Nadia Mansouri (UM6P)</strong> pour CISA 2025.
+              </div>
+<div class="font-code-citation text-[11px] text-outline">il y a 8 min • Confirmation automatique envoyée</div>
+</div>
+</div>
+<!-- Event 2: Article Publié MascIR -->
+<div class="relative flex items-start gap-space-md">
+<div class="relative z-10 w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[15px]">article</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Article d'actualité publié : <strong class="text-on-surface font-semibold">« Partenariat MSRASI - MascIR »</strong>.
+              </div>
+<div class="font-code-citation text-[11px] text-outline">il y a 2h • Portail public & Réseaux</div>
+</div>
+</div>
+<!-- Event 3: Mise à jour session IA -->
+<div class="relative flex items-start gap-space-md">
+<div class="relative z-10 w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[15px]">update</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Mise à jour du programme : <span class="text-on-surface font-semibold">Session IA & Santé</span> ajoutée au track 2.
+              </div>
+<div class="font-code-citation text-[11px] text-outline">il y a 5h • Modifié par Secrétariat</div>
+</div>
+</div>
+<!-- Event 4: Export de badges -->
+<div class="relative flex items-start gap-space-md">
+<div class="relative z-10 w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[15px]">print</span>
+</div>
+<div class="space-y-0.5">
+<div class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Exportation de masse : <strong class="text-on-surface font-semibold">240 badges congressistes</strong> générés au format PDF.
+              </div>
+<div class="font-code-citation text-[11px] text-outline">Hier à 17:42 • Archive sécurisée</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<a class="block text-center py-2 text-label-sm text-label-sm text-outline hover:text-primary font-semibold transition-colors" href="#">
+            Voir tout l'historique d'audit (64 entrées)
+          </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Slide-Over Modal for "Créer un événement" -->
+<div class="fixed inset-0 z-50 hidden" id="create-event-modal">
+<!-- Backdrop Blur Overlay -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm transition-opacity" id="modal-backdrop"></div>
+<!-- Drawer Panel Container -->
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<div class="w-screen max-w-lg bg-surface-container-lowest shadow-xl flex flex-col justify-between">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-inverse-surface text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[24px]">event_note</span>
+<div>
+<h3 class="font-headline-xs text-headline-xs text-white font-bold">Nouveau Colloque / Événement</h3>
+<p class="font-label-sm text-label-sm text-surface-dim">Enregistrement dans l'index MSRASI</p>
+</div>
+</div>
+<button class="p-1 rounded text-surface-dim hover:text-white hover:bg-surface-container/20 transition-colors" id="close-event-modal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Form Content -->
+<div class="p-space-lg space-y-space-md overflow-y-auto flex-1">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Intitulé Officiel de l'Événement</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ex: Colloque International sur les Matériaux Avancés" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Typologie</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none">
+<option>Conférence</option>
+<option>Atelier / Workshop</option>
+<option>Symposium</option>
+<option>Hackathon R&D</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Discipline Mère</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none">
+<option>Sciences de l'Ingénieur</option>
+<option>IA & Robotique</option>
+<option>Énergie & Environnement</option>
+<option>Biotechnologies</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Date d'Ouverture</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none" type="date"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Capacité d'Accueil</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none" placeholder="250" type="number"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Lieu & Institution Hôte</label>
+<input class="w-full px-space-md py-2.5 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none" placeholder="Ex: Campus UM6P Ben Guerir ou FST Mohammedia" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider block">Notice & Description Sommaire</label>
+<textarea class="w-full px-space-md py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none" placeholder="Présentation succincte des tracks, objectifs scientifiques et panels attendus..." rows="3"></textarea>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 space-y-1">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+              Workflow de Soumission
+            </div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+              L'enregistrement placera l'événement en statut « Brouillon ». Une notification sera adressée au Comité de Lecture pour validation préalable avant diffusion publique.
+            </p>
+</div>
+</div>
+<!-- Drawer Action Footer -->
+<div class="p-space-lg bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" id="cancel-event-modal">
+            Annuler
+          </button>
+<button class="px-space-md py-2.5 rounded-lg bg-tertiary-container hover:bg-tertiary text-white font-label-md text-label-md shadow-sm transition-colors">
+            Enregistrer le brouillon
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function initAdminDashboard() {
+      const modal = document.getElementById('create-event-modal');
+      const openBtn = document.getElementById('open-event-modal');
+      const closeBtn = document.getElementById('close-event-modal');
+      const cancelBtn = document.getElementById('cancel-event-modal');
+      const backdrop = document.getElementById('modal-backdrop');
+
+      function openModal() {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+    })();
+  </script>
+</div></main></div></body></html>
